@@ -1,14 +1,14 @@
 // import Sidebar from './Sidebar/Sidebar';
-import styles from './AuthLayout.module.css';
+// import styles from './AuthLayout.module.css';
 import { Outlet } from 'react-router';
 
 const AuthLayout = () => {
   return (
-    <div className={styles.authLayout}>
+    <div>
       <div>authlayout</div>
       {/* <Header /> */}
       {/* <Sidebar /> */}
-      <main className={styles.content}>
+      <main>
         <Outlet />
       </main>
       {/* <Footer /> */}
