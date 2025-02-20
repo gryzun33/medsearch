@@ -10,7 +10,6 @@ const MainLayout = () => {
   return (
     <div className={styles.mainLayout}>
       <Header />
-      {/* <Sidebar /> */}
       <main className={styles.content}>
         <Outlet />
       </main>
