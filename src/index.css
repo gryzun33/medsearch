@@ -1,7 +1,14 @@
 /* @import './assets/fonts/fonts.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
+@plugin '@tailwindcss/forms';
 
 @theme {
   --font-rubik: 'Rubik', 'serif';
+  --font-inter: 'Inter', serif;
+}
+
+body {
+  font-family: var(--font-inter);
 }
