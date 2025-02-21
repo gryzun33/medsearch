@@ -21,7 +21,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 my-10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-md">
+    <div className="max-w-md mx-auto  p-6 my-10  bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-md">
       <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">
         Sign up
       </h2>
