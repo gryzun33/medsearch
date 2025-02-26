@@ -16,9 +16,6 @@ const Registration = () => {
     console.log('Форма отправлена', data);
   };
 
-  // shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-md
-  // max-w-2xl
-
   return (
     <div className="w-full xs:max-w-md md:max-w-2xl mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
       <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">

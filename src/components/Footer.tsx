@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="mt-auto py-4 border-t-[1px] border-gray-300">
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-gray-600 justify-items-center ">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-2 text-gray-600 sm:justify-items-center ">
           <div>
             <h3 className="text-base font-semibold mb-2 text-gray-600">
               Contact Us

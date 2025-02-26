@@ -4,7 +4,7 @@ import { Outlet } from 'react-router';
 
 const AuthLayout = () => {
   return (
-    <div className="py-10">
+    <div className="xs:py-10">
       <Outlet />
     </div>
   );
