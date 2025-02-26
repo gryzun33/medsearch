@@ -7,6 +7,7 @@
 @theme {
   --font-rubik: 'Rubik', 'serif';
   --font-inter: 'Inter', serif;
+  --breakpoint-xs: 30rem;
 }
 
 body {

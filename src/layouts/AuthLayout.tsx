@@ -4,13 +4,8 @@ import { Outlet } from 'react-router';
 
 const AuthLayout = () => {
   return (
-    <div>
-      {/* <Header /> */}
-      {/* <Sidebar /> */}
-      <main>
-        <Outlet />
-      </main>
-      {/* <Footer /> */}
+    <div className="py-10">
+      <Outlet />
     </div>
   );
 };
