@@ -11,7 +11,6 @@ type FormFieldProps<T extends FieldValues> = {
   type: string;
   register: UseFormRegister<T>;
   errors: FieldError | undefined;
-  validationRules?: object;
 };
 
 const FormField = <T extends FieldValues>({
@@ -20,7 +19,6 @@ const FormField = <T extends FieldValues>({
   type,
   register,
   errors,
-  validationRules,
 }: FormFieldProps<T>) => {
   return (
     <div className="mb-7 relative">
@@ -33,7 +31,7 @@ const FormField = <T extends FieldValues>({
       <input
         type={type}
         id={String(id)}
-        {...register(id, validationRules)}
+        {...register(id)}
         className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
       />
       {errors && errors.message && (

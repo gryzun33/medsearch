@@ -1,16 +1,31 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { SignUpData } from '../../types/sign-up';
+import { z, ZodType } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 import FormField from '../../components/FormField';
 import SubmitButton from '../../components/SubmitButton';
 import BottomLink from '../../components/BottomLink';
+import { SignUpData } from '../../types/sign-up';
+
+const zodSchema: ZodType<SignUpData> = z
+  .object({
+    name: z.string().min(1, 'Name is required'),
+    email: z.string().email('Invalid email format'),
+    password: z.string().min(6, 'Minimum of 6 characters'),
+    confirmPassword: z.string().min(6, 'Minimum of 6 characters'),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: 'Passwords don`t match',
+    path: ['confirmPassword'],
+  });
 
 const Registration = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
-  } = useForm<SignUpData>();
+  } = useForm<SignUpData>({
+    resolver: zodResolver(zodSchema),
+  });
 
   const onSubmit: SubmitHandler<SignUpData> = (data) => {
     console.log('Форма отправлена', data);
@@ -30,7 +45,6 @@ const Registration = () => {
               type="text"
               register={register}
               errors={errors.name}
-              validationRules={{ required: 'Name is required' }}
             />
             <FormField
               label="Email"
@@ -38,13 +52,6 @@ const Registration = () => {
               type="email"
               register={register}
               errors={errors.email}
-              validationRules={{
-                required: 'Email is required',
-                pattern: {
-                  value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                  message: 'Invalid email format',
-                },
-              }}
             />
           </div>
           <div className="max-w-md w-full">
@@ -54,10 +61,6 @@ const Registration = () => {
               type="password"
               register={register}
               errors={errors.password}
-              validationRules={{
-                required: 'Password is required',
-                minLength: { value: 6, message: 'Minimum of 6 characters' },
-              }}
             />
             <FormField
               label="Confirm password"
@@ -65,18 +68,11 @@ const Registration = () => {
               type="password"
               register={register}
               errors={errors.confirmPassword}
-              validationRules={{
-                required: 'Confirm password',
-                validate: (value: string) =>
-                  value === watch('password') || 'Passwords don`t match',
-              }}
             />
           </div>
         </div>
-
         <SubmitButton>Sign up</SubmitButton>
       </form>
-
       <BottomLink
         text="Already have an account?"
         linkText="Sign in"
