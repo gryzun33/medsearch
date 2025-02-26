@@ -8,10 +8,19 @@ import { SignUpData } from '../../types/sign-up';
 
 const zodSchema: ZodType<SignUpData> = z
   .object({
-    name: z.string().min(1, 'Name is required'),
-    email: z.string().email('Invalid email format'),
-    password: z.string().min(6, 'Minimum of 6 characters'),
-    confirmPassword: z.string().min(6, 'Minimum of 6 characters'),
+    name: z.string().nonempty('Field is required'),
+    email: z
+      .string()
+      .nonempty('Field is required')
+      .email('Invalid email format'),
+    password: z
+      .string()
+      .nonempty('Field is required')
+      .min(6, 'Minimum of 6 characters'),
+    confirmPassword: z
+      .string()
+      .nonempty('Field is required')
+      .min(6, 'Minimum of 6 characters'),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: 'Passwords don`t match',
