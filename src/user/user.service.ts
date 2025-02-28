@@ -31,7 +31,11 @@ export class UserService {
     id: string,
     updatePasswordDto: UpdatePasswordDto,
   ): Promise<UserResponse> {
-    return this.userRepository.update(id, updatePasswordDto);
+    const updatedData = {
+      password: updatePasswordDto.newPassword,
+    };
+
+    return this.userRepository.update(id, updatedData);
   }
 
   async remove(id: string): Promise<void> {

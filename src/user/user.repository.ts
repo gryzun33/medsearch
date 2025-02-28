@@ -3,8 +3,8 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { User } from '@prisma/client';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { UserLogin } from './entities/user.entity';
-import { UpdatePasswordDto } from './dto/update-password.dto';
+import { UpdatePasswordData, UserLogin } from './entities/user.entity';
+// import { UpdatePasswordDto } from './dto/update-password.dto';
 
 @Injectable()
 export class UserRepository {
@@ -66,7 +66,7 @@ export class UserRepository {
 
   async update(
     id: string,
-    updateData: UpdateUserDto | UpdatePasswordDto,
+    updateData: UpdateUserDto | UpdatePasswordData,
   ): Promise<Omit<User, 'password'>> {
     return this.prisma.user.update({
       where: { id },

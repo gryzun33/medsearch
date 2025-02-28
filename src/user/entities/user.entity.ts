@@ -8,3 +8,7 @@ export class User {
 export type UserLogin = Omit<User, 'name'>;
 
 export type UserResponse = Omit<User, 'password'>;
+
+export type UpdatePasswordData = {
+  password: string;
+};
