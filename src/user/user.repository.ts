@@ -4,6 +4,7 @@ import { User } from '@prisma/client';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserLogin } from './entities/user.entity';
+import { UpdatePasswordDto } from './dto/update-password.dto';
 
 @Injectable()
 export class UserRepository {
@@ -30,35 +31,6 @@ export class UserRepository {
     }
   }
 
-  async findById(id: string): Promise<Omit<User, 'password'> | null> {
-    try {
-      return this.prisma.user.findUnique({
-        where: { id },
-        omit: {
-          password: true,
-        },
-      });
-    } catch (error) {
-      if (error.code === 'P2025') {
-        throw new NotFoundException('User not found');
-      }
-      throw new Error(`Error during getting user by id: ${error.message}`);
-    }
-  }
-
-  async findByIdWithPassword(id: string): Promise<User | null> {
-    try {
-      return this.prisma.user.findUnique({
-        where: { id },
-      });
-    } catch (error) {
-      if (error.code === 'P2025') {
-        throw new NotFoundException('User not found');
-      }
-      throw new Error(`Error during getting user by id: ${error.message}`);
-    }
-  }
-
   async findAll(): Promise<Omit<User, 'password'>[]> {
     return this.prisma.user.findMany({
       omit: {
@@ -67,29 +39,47 @@ export class UserRepository {
     });
   }
 
-  async update(
-    id: string,
-    updateData: UpdateUserDto,
-  ): Promise<Omit<User, 'password'>> {
-    try {
-      return this.prisma.user.update({
-        where: { id },
-        data: {
-          ...updateData,
-        },
-        omit: {
-          password: true,
-        },
-      });
-    } catch (error) {
-      if (error.code === 'P2025') {
-        throw new NotFoundException('User not found');
-      }
-      throw new Error(`Error during updating user: ${error.message}`);
+  async findById(id: string): Promise<Omit<User, 'password'>> {
+    const user = await this.prisma.user.findUnique({
+      where: { id },
+      omit: {
+        password: true,
+      },
+    });
+
+    if (!user) {
+      throw new NotFoundException('User with such id is not found');
     }
+    return user;
   }
 
-  async delete(id: string): Promise<void> {
+  async findByIdWithPassword(id: string): Promise<User> {
+    const user = await this.prisma.user.findUnique({
+      where: { id },
+    });
+
+    if (!user) {
+      throw new NotFoundException('User with such id is not found');
+    }
+    return user;
+  }
+
+  async update(
+    id: string,
+    updateData: UpdateUserDto | UpdatePasswordDto,
+  ): Promise<Omit<User, 'password'>> {
+    return this.prisma.user.update({
+      where: { id },
+      data: {
+        ...updateData,
+      },
+      omit: {
+        password: true,
+      },
+    });
+  }
+
+  async remove(id: string): Promise<void> {
     try {
       await this.prisma.user.delete({
         where: { id },
@@ -102,7 +92,7 @@ export class UserRepository {
     }
   }
 
-  async getUserByEmail(email: string): Promise<UserLogin | null> {
+  async findUserByEmail(email: string): Promise<UserLogin | null> {
     return await this.prisma.user.findFirst({
       where: {
         email,
