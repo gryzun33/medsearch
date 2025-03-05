@@ -17,14 +17,14 @@ export class AuthGuard implements CanActivate {
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest<Request>();
-    const token = this.extractTokenFromHeader(request);
+    const accessToken = request.cookies?.accessToken;
 
-    if (!token) {
-      throw new UnauthorizedException('Token not provided');
+    if (!accessToken) {
+      throw new UnauthorizedException('Access token is missing');
     }
 
     try {
-      const payload = await this.jwtService.verifyAsync(token, {
+      const payload = await this.jwtService.verifyAsync(accessToken, {
         secret: this.configService.get<string>('JWT_SECRET'),
       });
       request['user'] = payload;
@@ -33,13 +33,5 @@ export class AuthGuard implements CanActivate {
     }
 
     return true;
-  }
-
-  private extractTokenFromHeader(request: Request): string | undefined {
-    const authHeader = request.headers.authorization;
-    if (!authHeader) return undefined;
-
-    const [type, token] = authHeader.split(' ');
-    return type === 'Bearer' ? token : undefined;
   }
 }
