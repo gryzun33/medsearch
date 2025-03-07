@@ -20,6 +20,8 @@ export class AuthController {
   @Post('signup')
   async signup(@Body() body: SignupUserDto) {
     const { email, name, password } = body;
+    console.log('signup');
+    console.log('body=', body);
     return await this.authService.signup(email, name, password);
   }
 
