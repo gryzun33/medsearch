@@ -5,6 +5,7 @@ import FormField from '../../components/FormField';
 import SubmitButton from '../../components/SubmitButton';
 import BottomLink from '../../components/BottomLink';
 import { SignUpData } from '../../types/sign-up';
+import { useSignupMutation } from '../../api/authApiSlice';
 
 const zodSchema: ZodType<SignUpData> = z
   .object({
@@ -28,6 +29,8 @@ const zodSchema: ZodType<SignUpData> = z
   });
 
 const Registration = () => {
+  const [signup, { isError, error }] = useSignupMutation();
+
   const {
     register,
     handleSubmit,
@@ -36,9 +39,24 @@ const Registration = () => {
     resolver: zodResolver(zodSchema),
   });
 
-  const onSubmit: SubmitHandler<SignUpData> = (data) => {
+  const onSubmit: SubmitHandler<SignUpData> = async (data) => {
     console.log('Форма отправлена', data);
+    const body = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    };
+    try {
+      const result = await signup(body).unwrap();
+      console.log('Registration successful:', result);
+    } catch (err) {
+      console.error('Registration failed:', err);
+    }
   };
+
+  if (isError) {
+    return <div>ERROR!!!: {error.toString()}</div>;
+  }
 
   return (
     <div className="w-full xs:max-w-md md:max-w-2xl mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
