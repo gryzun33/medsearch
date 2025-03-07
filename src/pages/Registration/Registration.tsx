@@ -5,7 +5,7 @@ import FormField from '../../components/FormField';
 import SubmitButton from '../../components/SubmitButton';
 import BottomLink from '../../components/BottomLink';
 import { SignUpData } from '../../types/sign-up';
-import { useSignupMutation } from '../../api/authApiSlice';
+import { useLoginMutation, useSignupMutation } from '../../api/authApiSlice';
 
 const zodSchema: ZodType<SignUpData> = z
   .object({
@@ -29,7 +29,11 @@ const zodSchema: ZodType<SignUpData> = z
   });
 
 const Registration = () => {
-  const [signup, { isError, error }] = useSignupMutation();
+  // const [signup, { isError, error }] = useSignupMutation();
+  const [signup, { isLoading: isSignupLoading, error: signupError }] =
+    useSignupMutation();
+  const [signin, { isLoading: isLoginLoading, error: signinError }] =
+    useLoginMutation();
 
   const {
     register,
@@ -47,15 +51,23 @@ const Registration = () => {
       password: data.password,
     };
     try {
-      const result = await signup(body).unwrap();
-      console.log('Registration successful:', result);
+      await signup(body).unwrap();
+      await signin({ email: data.email, password: data.password }).unwrap();
     } catch (err) {
       console.error('Registration failed:', err);
     }
   };
 
-  if (isError) {
-    return <div>ERROR!!!: {error.toString()}</div>;
+  if (signupError) {
+    return <div>ERROR1!!!: {signupError.toString()}</div>;
+  }
+
+  if (signinError) {
+    return <div>ERROR2!!!: {signinError.toString()}</div>;
+  }
+
+  if (isSignupLoading || isLoginLoading) {
+    return <div>LOADING...</div>;
   }
 
   return (
