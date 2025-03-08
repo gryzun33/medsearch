@@ -32,7 +32,7 @@ const NavList = () => {
                 <UserCircleIcon className="size-9 text-white" />
               </NavLink>
             </li>
-            <li className="md:hidden">
+            <li>
               <button onClick={handleLogout}>
                 <ArrowRightStartOnRectangleIcon className="size-9 text-white" />
               </button>
@@ -41,7 +41,7 @@ const NavList = () => {
         ) : (
           <>
             <li className="md:hidden">
-              <NavLink to="/">
+              <NavLink to="/login">
                 <ArrowRightEndOnRectangleIcon className="size-9 text-white" />
               </NavLink>
             </li>

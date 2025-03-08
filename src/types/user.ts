@@ -15,3 +15,7 @@ export type SignUpData = {
   password: string;
   confirmPassword: string;
 };
+
+export type Profile = {
+  name: string;
+};
