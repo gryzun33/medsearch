@@ -4,8 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import FormField from '../../components/FormField';
 import SubmitButton from '../../components/SubmitButton';
 import BottomLink from '../../components/BottomLink';
-import { SignUpData } from '../../types/sign-up';
+import { SignUpData } from '../../types/user';
 import { useLoginMutation, useSignupMutation } from '../../api/authApiSlice';
+import { useNavigate } from 'react-router';
 
 const zodSchema: ZodType<SignUpData> = z
   .object({
@@ -29,6 +30,8 @@ const zodSchema: ZodType<SignUpData> = z
   });
 
 const Registration = () => {
+  const navigate = useNavigate();
+
   // const [signup, { isError, error }] = useSignupMutation();
   const [signup, { isLoading: isSignupLoading, error: signupError }] =
     useSignupMutation();
@@ -53,6 +56,7 @@ const Registration = () => {
     try {
       await signup(body).unwrap();
       await signin({ email: data.email, password: data.password }).unwrap();
+      navigate('/');
     } catch (err) {
       console.error('Registration failed:', err);
     }
