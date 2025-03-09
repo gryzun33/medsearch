@@ -4,7 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import FormField from '../../components/FormField';
 import SubmitButton from '../../components/SubmitButton';
 import BottomLink from '../../components/BottomLink';
-import { SignInData } from '../../types/sign-up';
+import { SignInData } from '../../types/user';
+import { useLoginMutation } from '../../api/authApiSlice';
+import { useNavigate } from 'react-router';
 
 const zodSchema: ZodType<SignInData> = z.object({
   email: z.string().nonempty('Field is required').email('Invalid email format'),
@@ -15,6 +17,11 @@ const zodSchema: ZodType<SignInData> = z.object({
 });
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const [signin, { isLoading: isLoginLoading, error: signinError }] =
+    useLoginMutation();
+
   const {
     register,
     handleSubmit,
@@ -23,9 +30,24 @@ const Login = () => {
     resolver: zodResolver(zodSchema),
   });
 
-  const onSubmit: SubmitHandler<SignInData> = (data) => {
+  const onSubmit: SubmitHandler<SignInData> = async (data) => {
     console.log('Форма логин отправлена', data);
+
+    try {
+      await signin({ email: data.email, password: data.password }).unwrap();
+      navigate('/');
+    } catch (err) {
+      console.error('Login failed:', err);
+    }
   };
+
+  if (signinError) {
+    return <div>SIGNINERROR!!!: {signinError.toString()}</div>;
+  }
+
+  if (isLoginLoading) {
+    return <div>LOADING...</div>;
+  }
 
   return (
     <div className="w-full xs:max-w-md mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
