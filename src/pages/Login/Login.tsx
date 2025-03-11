@@ -7,10 +7,7 @@ import BottomLink from '../../components/BottomLink';
 import { SignInData } from '../../types/user';
 import { useLoginMutation } from '../../api/authApiSlice';
 import { useNavigate } from 'react-router';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { ExclamationCircleIcon } from '@heroicons/react/24/solid';
 import { getErrorMessage } from '@/utils/getErrorMessage';
-import { AlertCircle } from 'lucide-react';
 import { AlertDestructive } from '@/components/ui/AlertDestructive';
 
 const zodSchema: ZodType<SignInData> = z.object({
@@ -46,20 +43,12 @@ const Login = () => {
     }
   };
 
-  // if (signinError) {
-  //   return <div>SIGNINERROR!!!: {signinError.toString()}</div>;
-  // }
-
-  // if (isLoginLoading) {
-  //   return <div>LOADING...</div>;
-  // }
-
   return (
     <div className="w-full xs:max-w-md mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
       <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">
         Sign in
       </h2>
-      {signinError && (
+      {!isLoginLoading && signinError && (
         <AlertDestructive message={getErrorMessage(signinError)} />
       )}
       <form onSubmit={handleSubmit(onSubmit)}>

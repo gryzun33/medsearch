@@ -7,6 +7,8 @@ import BottomLink from '../../components/BottomLink';
 import { SignUpData } from '../../types/user';
 import { useLoginMutation, useSignupMutation } from '../../api/authApiSlice';
 import { useNavigate } from 'react-router';
+import { AlertDestructive } from '@/components/ui/AlertDestructive';
+import { getErrorMessage } from '@/utils/getErrorMessage';
 
 const zodSchema: ZodType<SignUpData> = z
   .object({
@@ -62,23 +64,14 @@ const Registration = () => {
     }
   };
 
-  if (signupError) {
-    return <div>ERROR1!!!: {signupError.toString()}</div>;
-  }
-
-  if (signinError) {
-    return <div>ERROR2!!!: {signinError.toString()}</div>;
-  }
-
-  // if (isSignupLoading || isLoginLoading) {
-  //   return <div>LOADING...</div>;
-  // }
+  const error = signupError || signinError;
 
   return (
     <div className="w-full xs:max-w-md md:max-w-2xl mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
       <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">
         Sign up
       </h2>
+      {error && <AlertDestructive message={getErrorMessage(error)} />}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col md:flex-row md:justify-between md:gap-5">
           <div className="max-w-md w-full">
