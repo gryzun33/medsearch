@@ -9,6 +9,9 @@ import { useLoginMutation } from '../../api/authApiSlice';
 import { useNavigate } from 'react-router';
 import { getErrorMessage } from '@/utils/getErrorMessage';
 import { AlertDestructive } from '@/components/ui/AlertDestructive';
+import { useDispatch } from 'react-redux';
+import { showToast } from '@/store/slices/toastSlice';
+// import { toast } from 'sonner';
 
 const zodSchema: ZodType<SignInData> = z.object({
   email: z.string().nonempty('Field is required').email('Invalid email format'),
@@ -20,6 +23,7 @@ const zodSchema: ZodType<SignInData> = z.object({
 
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [signin, { isLoading: isLoginLoading, error: signinError }] =
     useLoginMutation();
@@ -37,6 +41,12 @@ const Login = () => {
 
     try {
       await signin({ email: data.email, password: data.password }).unwrap();
+
+      dispatch(showToast('You have successfully logged in!'));
+
+      // toast.success('You have successfully logged in!', {
+      //   duration: 3000,
+      // });
       navigate('/');
     } catch (err) {
       console.error('Login failed:', err);

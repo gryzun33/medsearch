@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { authApiSlice } from '../api/authApiSlice';
 import userReducer from './slices/userSlice';
+import toastReducer from './slices/toastSlice';
 import { profileApiSlice } from '../api/profileApiSlice';
 
 export const store = configureStore({
   reducer: {
     user: userReducer,
+    toast: toastReducer,
     [authApiSlice.reducerPath]: authApiSlice.reducer,
     [profileApiSlice.reducerPath]: profileApiSlice.reducer,
   },

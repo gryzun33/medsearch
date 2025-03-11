@@ -22,21 +22,3 @@ export const getErrorMessage = (
 
   return 'An unexpected error occurred';
 };
-
-// export const getErrorMessage = (
-//   error: FetchBaseQueryError | SerializedError
-// ): string => {
-//   if ('status' in error) {
-//     if (typeof error.data === 'object' && error.data !== null) {
-//       // Если data — объект, пытаемся взять message, иначе сериализуем объект
-//       return (error.data as { message?: string }).message || JSON.stringify(error.data);
-//     }
-//     return typeof error.error === 'string' ? error.error : 'An unknown error occurred';
-//   }
-
-//   if ('message' in error) {
-//     return error.message || 'An unexpected error occurred';
-//   }
-
-//   return 'An unexpected error occurred';
-// };
