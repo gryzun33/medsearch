@@ -70,9 +70,9 @@ const Registration = () => {
     return <div>ERROR2!!!: {signinError.toString()}</div>;
   }
 
-  if (isSignupLoading || isLoginLoading) {
-    return <div>LOADING...</div>;
-  }
+  // if (isSignupLoading || isLoginLoading) {
+  //   return <div>LOADING...</div>;
+  // }
 
   return (
     <div className="w-full xs:max-w-md md:max-w-2xl mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
@@ -114,7 +114,9 @@ const Registration = () => {
             />
           </div>
         </div>
-        <SubmitButton>Sign up</SubmitButton>
+        <SubmitButton isLoading={isLoginLoading || isSignupLoading}>
+          Sign up
+        </SubmitButton>
       </form>
       <BottomLink
         text="Already have an account?"

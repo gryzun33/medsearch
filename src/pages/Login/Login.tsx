@@ -45,9 +45,9 @@ const Login = () => {
     return <div>SIGNINERROR!!!: {signinError.toString()}</div>;
   }
 
-  if (isLoginLoading) {
-    return <div>LOADING...</div>;
-  }
+  // if (isLoginLoading) {
+  //   return <div>LOADING...</div>;
+  // }
 
   return (
     <div className="w-full xs:max-w-md mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
@@ -73,7 +73,7 @@ const Login = () => {
           />
         </div>
 
-        <SubmitButton>Sign in</SubmitButton>
+        <SubmitButton isLoading={isLoginLoading}>Sign in</SubmitButton>
       </form>
       <BottomLink
         text="Don't have an account?"

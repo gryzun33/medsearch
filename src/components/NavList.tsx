@@ -24,7 +24,7 @@ const NavList = () => {
 
   return (
     <nav>
-      <ul className="flex gap-4">
+      <ul className="flex gap-4 items-center">
         {isLogin ? (
           <>
             <li>
@@ -32,7 +32,7 @@ const NavList = () => {
                 <UserCircleIcon className="size-9 text-white" />
               </NavLink>
             </li>
-            <li>
+            <li className="flex items-center">
               <button onClick={handleLogout}>
                 <ArrowRightStartOnRectangleIcon className="size-9 text-white" />
               </button>
