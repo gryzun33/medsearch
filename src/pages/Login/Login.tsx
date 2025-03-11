@@ -41,12 +41,7 @@ const Login = () => {
 
     try {
       await signin({ email: data.email, password: data.password }).unwrap();
-
       dispatch(showToast('You have successfully logged in!'));
-
-      // toast.success('You have successfully logged in!', {
-      //   duration: 3000,
-      // });
       navigate('/');
     } catch (err) {
       console.error('Login failed:', err);

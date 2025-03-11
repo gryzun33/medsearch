@@ -9,6 +9,8 @@ import { useLoginMutation, useSignupMutation } from '../../api/authApiSlice';
 import { useNavigate } from 'react-router';
 import { AlertDestructive } from '@/components/ui/AlertDestructive';
 import { getErrorMessage } from '@/utils/getErrorMessage';
+import { useDispatch } from 'react-redux';
+import { showToast } from '@/store/slices/toastSlice';
 
 const zodSchema: ZodType<SignUpData> = z
   .object({
@@ -33,6 +35,7 @@ const zodSchema: ZodType<SignUpData> = z
 
 const Registration = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // const [signup, { isError, error }] = useSignupMutation();
   const [signup, { isLoading: isSignupLoading, error: signupError }] =
@@ -58,6 +61,7 @@ const Registration = () => {
     try {
       await signup(body).unwrap();
       await signin({ email: data.email, password: data.password }).unwrap();
+      dispatch(showToast('You have successfully registered!'));
       navigate('/');
     } catch (err) {
       console.error('Registration failed:', err);
