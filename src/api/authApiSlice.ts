@@ -1,4 +1,8 @@
-import { createApi } from '@reduxjs/toolkit/query/react';
+import {
+  createApi,
+  FetchBaseQueryArgs,
+  FetchBaseQueryError,
+} from '@reduxjs/toolkit/query/react';
 import { baseQuery } from './api';
 import { User, SignInData } from '../types/user';
 import { login, logout } from '../store/slices/userSlice';
@@ -21,6 +25,17 @@ export const authApiSlice = createApi({
         method: 'POST',
         body: credentials,
       }),
+      transformErrorResponse: (error): { message: string } => {
+        if ('status' in error) {
+          return {
+            message:
+              typeof error.data === 'string'
+                ? error.data
+                : 'Something went wrong',
+          };
+        }
+        return { message: 'Unexpected error occurred' };
+      },
       onQueryStarted: async (_, api) => {
         const { dispatch, queryFulfilled } = api;
 

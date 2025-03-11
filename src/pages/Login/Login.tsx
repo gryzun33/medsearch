@@ -7,6 +7,11 @@ import BottomLink from '../../components/BottomLink';
 import { SignInData } from '../../types/user';
 import { useLoginMutation } from '../../api/authApiSlice';
 import { useNavigate } from 'react-router';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { ExclamationCircleIcon } from '@heroicons/react/24/solid';
+import { getErrorMessage } from '@/utils/getErrorMessage';
+import { AlertCircle } from 'lucide-react';
+import { AlertDestructive } from '@/components/ui/AlertDestructive';
 
 const zodSchema: ZodType<SignInData> = z.object({
   email: z.string().nonempty('Field is required').email('Invalid email format'),
@@ -41,9 +46,9 @@ const Login = () => {
     }
   };
 
-  if (signinError) {
-    return <div>SIGNINERROR!!!: {signinError.toString()}</div>;
-  }
+  // if (signinError) {
+  //   return <div>SIGNINERROR!!!: {signinError.toString()}</div>;
+  // }
 
   // if (isLoginLoading) {
   //   return <div>LOADING...</div>;
@@ -54,6 +59,9 @@ const Login = () => {
       <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">
         Sign in
       </h2>
+      {signinError && (
+        <AlertDestructive message={getErrorMessage(signinError)} />
+      )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col">
           <FormField
