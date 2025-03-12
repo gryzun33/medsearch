@@ -8,6 +8,7 @@ import Registration from './pages/Registration/Registration';
 import Profile from './pages/Profile/Profile';
 import Cart from './pages/Cart/Cart';
 import Product from './pages/Product/Product';
+import RedirectRoute from './components/RedirectRoute';
 
 function App() {
   return (
@@ -16,8 +17,22 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route element={<AuthLayout />}>
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Registration />} />
+            <Route
+              path="login"
+              element={
+                <RedirectRoute>
+                  <Login />
+                </RedirectRoute>
+              }
+            />
+            <Route
+              path="register"
+              element={
+                <RedirectRoute>
+                  <Registration />
+                </RedirectRoute>
+              }
+            />
           </Route>
           <Route
             path="profile"

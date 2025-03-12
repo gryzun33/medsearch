@@ -5,11 +5,11 @@ import { User } from '../types/user';
 export const profileApiSlice = createApi({
   reducerPath: 'profileApi',
   baseQuery: baseQueryWithReauth,
-  tagTypes: ['user'],
+  // tagTypes: ['user'],
   endpoints: (builder) => ({
     getProfile: builder.query<User, void>({
       query: () => '/auth/me',
-      providesTags: ['user'],
+      // providesTags: ['user'],
       onQueryStarted: async (_, { queryFulfilled }) => {
         try {
           await queryFulfilled;
@@ -25,7 +25,7 @@ export const profileApiSlice = createApi({
         method: 'PUT',
         body: profileData,
       }),
-      invalidatesTags: ['user'],
+      // invalidatesTags: ['user'],
       onQueryStarted: async (_, { queryFulfilled }) => {
         try {
           await queryFulfilled;

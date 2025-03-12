@@ -4,15 +4,15 @@ import {
   ArrowRightStartOnRectangleIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-// import { RootState } from '../store/store';
-// import { useSelector } from 'react-redux';
+import { RootState } from '../store/store';
+import { useSelector } from 'react-redux';
 import { useLogoutMutation } from '../api/authApiSlice';
-import { useGetProfileQuery } from '@/api/profileApiSlice';
+// import { useGetProfileQuery } from '@/api/profileApiSlice';
 import { memo } from 'react';
 
 const NavList = memo(() => {
-  // const isLogin = useSelector((state: RootState) => state.user.isLogin);
-  const { data: user /*  error */ } = useGetProfileQuery();
+  const isLogin = useSelector((state: RootState) => state.user.isLogin);
+  // const { data: user /*  error */ } = useGetProfileQuery();
   const [logoutApi] = useLogoutMutation();
   const navigate = useNavigate();
   console.log('LOGIN NAVLIST');
@@ -29,7 +29,7 @@ const NavList = memo(() => {
   return (
     <nav>
       <ul className="flex gap-4 items-center">
-        {user ? (
+        {isLogin ? (
           <>
             <li>
               <NavLink to="/profile">

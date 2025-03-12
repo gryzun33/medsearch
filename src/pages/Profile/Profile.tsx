@@ -4,6 +4,8 @@ import { getErrorMessage } from '@/utils/getErrorMessage';
 const Profile = () => {
   const { data: user, isLoading, error } = useGetProfileQuery();
 
+  console.log('USER-PROFILE=', user);
+
   if (error) {
     return <div>{getErrorMessage(error)}</div>;
   }

@@ -8,7 +8,13 @@ type Props = {
 };
 
 const ProtectedRoute = ({ children }: Props) => {
-  const { data: user, error } = useGetProfileQuery();
+  const { data: user, isLoading, error } = useGetProfileQuery();
+
+  console.log('user Protected=', user);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Или любой другой индикатор загрузки
+  }
 
   if (error || !user) {
     return <Navigate to="/login" replace />;

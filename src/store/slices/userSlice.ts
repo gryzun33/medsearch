@@ -1,5 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from '../../types/user';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer } from 'redux-persist';
 
 interface UserState {
   isLogin: boolean;
@@ -30,5 +32,12 @@ const userSlice = createSlice({
   },
 });
 
+const persistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['isLogin'],
+};
+
+const persistedUserReducer = persistReducer(persistConfig, userSlice.reducer);
 export const { login, logout } = userSlice.actions;
-export default userSlice.reducer;
+export default persistedUserReducer;

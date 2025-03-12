@@ -2,7 +2,7 @@ import { createApi } from '@reduxjs/toolkit/query/react';
 import { baseQuery } from './api';
 import { User, SignInData } from '../types/user';
 import { login, logout } from '../store/slices/userSlice';
-import { profileApiSlice } from './profileApiSlice';
+// import { profileApiSlice } from './profileApiSlice';
 
 export const authApiSlice = createApi({
   reducerPath: 'api',
@@ -26,7 +26,7 @@ export const authApiSlice = createApi({
         const { dispatch, queryFulfilled } = api;
         try {
           const { data } = await queryFulfilled;
-          dispatch(profileApiSlice.util.invalidateTags(['user']));
+          // dispatch(profileApiSlice.util.invalidateTags(['user']));
           dispatch(login(data));
         } catch (error) {
           console.error('Login rtk failed:', error);
@@ -44,7 +44,7 @@ export const authApiSlice = createApi({
         const { dispatch, queryFulfilled } = api;
         try {
           await queryFulfilled;
-          dispatch(profileApiSlice.util.invalidateTags(['user']));
+          // dispatch(profileApiSlice.util.invalidateTags(['user']));
           dispatch(logout());
         } catch (err) {
           console.error('Logout failed:', err);
