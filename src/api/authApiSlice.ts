@@ -26,6 +26,7 @@ export const authApiSlice = createApi({
         const { dispatch, queryFulfilled } = api;
         try {
           const { data } = await queryFulfilled;
+          dispatch(profileApiSlice.util.invalidateTags(['user']));
           dispatch(login(data));
         } catch (error) {
           console.error('Login rtk failed:', error);

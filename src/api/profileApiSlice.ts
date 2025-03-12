@@ -10,6 +10,13 @@ export const profileApiSlice = createApi({
     getProfile: builder.query<User, void>({
       query: () => '/auth/me',
       providesTags: ['user'],
+      onQueryStarted: async (_, { queryFulfilled }) => {
+        try {
+          await queryFulfilled;
+        } catch (err) {
+          console.error('Error with getting profile: ', err);
+        }
+      },
     }),
 
     updateProfile: builder.mutation<User, Partial<User>>({
@@ -19,6 +26,13 @@ export const profileApiSlice = createApi({
         body: profileData,
       }),
       invalidatesTags: ['user'],
+      onQueryStarted: async (_, { queryFulfilled }) => {
+        try {
+          await queryFulfilled;
+        } catch (err) {
+          console.error('Error with updating profile: ', err);
+        }
+      },
     }),
   }),
 });

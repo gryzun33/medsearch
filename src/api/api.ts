@@ -26,6 +26,7 @@ export const baseQueryWithReauth = async (
       result = await baseQuery(args, api, extraOptions);
     } else {
       api.dispatch(logout());
+      console.log('LOGOUT');
     }
   }
   return result;

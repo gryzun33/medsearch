@@ -8,12 +8,14 @@ import {
 // import { useSelector } from 'react-redux';
 import { useLogoutMutation } from '../api/authApiSlice';
 import { useGetProfileQuery } from '@/api/profileApiSlice';
+import { memo } from 'react';
 
-const NavList = () => {
+const NavList = memo(() => {
   // const isLogin = useSelector((state: RootState) => state.user.isLogin);
   const { data: user /*  error */ } = useGetProfileQuery();
   const [logoutApi] = useLogoutMutation();
   const navigate = useNavigate();
+  console.log('LOGIN NAVLIST');
 
   const handleLogout = async () => {
     try {
@@ -68,6 +70,6 @@ const NavList = () => {
       </ul>
     </nav>
   );
-};
+});
 
 export default NavList;
