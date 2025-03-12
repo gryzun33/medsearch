@@ -21,7 +21,15 @@ export const baseQueryWithReauth = async (
 ) => {
   let result = await baseQuery(args, api, extraOptions);
   if (result.error && result.error.status === 401) {
-    const refreshResult = await baseQuery('/refresh', api, extraOptions);
+    const refreshResult = await baseQuery(
+      {
+        url: '/auth/refresh',
+        method: 'POST',
+        credentials: 'include',
+      },
+      api,
+      extraOptions
+    );
     if (!refreshResult.error) {
       result = await baseQuery(args, api, extraOptions);
     } else {
