@@ -1,21 +1,24 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { baseQueryWithReauth } from './api';
-import { Profile } from '../types/user';
+import { User } from '../types/user';
 
 export const profileApiSlice = createApi({
   reducerPath: 'profileApi',
   baseQuery: baseQueryWithReauth,
+  tagTypes: ['user'],
   endpoints: (builder) => ({
-    getProfile: builder.query<Profile, void>({
-      query: () => '/profile',
+    getProfile: builder.query<User, void>({
+      query: () => '/auth/me',
+      providesTags: ['user'],
     }),
 
-    updateProfile: builder.mutation<Profile, Partial<Profile>>({
+    updateProfile: builder.mutation<User, Partial<User>>({
       query: (profileData) => ({
-        url: '/profile',
+        url: '/auth/me',
         method: 'PUT',
         body: profileData,
       }),
+      invalidatesTags: ['user'],
     }),
   }),
 });

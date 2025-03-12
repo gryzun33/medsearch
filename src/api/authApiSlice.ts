@@ -2,6 +2,7 @@ import { createApi } from '@reduxjs/toolkit/query/react';
 import { baseQuery } from './api';
 import { User, SignInData } from '../types/user';
 import { login, logout } from '../store/slices/userSlice';
+import { profileApiSlice } from './profileApiSlice';
 
 export const authApiSlice = createApi({
   reducerPath: 'api',
@@ -40,9 +41,13 @@ export const authApiSlice = createApi({
 
       onQueryStarted: async (_, api) => {
         const { dispatch, queryFulfilled } = api;
-
-        await queryFulfilled;
-        dispatch(logout());
+        try {
+          await queryFulfilled;
+          dispatch(profileApiSlice.util.invalidateTags(['user']));
+          dispatch(logout());
+        } catch (err) {
+          console.error('Logout failed:', err);
+        }
       },
     }),
   }),

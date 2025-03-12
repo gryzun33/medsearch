@@ -11,7 +11,7 @@ const SubmitButton = ({ children, isLoading }: Props) => {
     <button
       type="submit"
       className={clsx(
-        'w-full flex justify-center items-center md:max-w-3xs mx-auto mt-3 py-2 px-4 bg-green-500 text-white rounded-md hover:bg-green-400 focus:outline-hidden focus:bg-green-400  cursor-pointer',
+        'w-full h-[40px] flex justify-center items-center md:max-w-3xs mx-auto mt-3 py-2 px-4 bg-green-500 text-white rounded-md hover:bg-green-400 focus:outline-hidden focus:bg-green-400  cursor-pointer',
         { 'opacity-70': isLoading }
       )}
       disabled={isLoading}
