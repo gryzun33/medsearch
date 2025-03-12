@@ -7,21 +7,48 @@ import {
   HttpCode,
   HttpStatus,
   UseGuards,
+  Get,
+  Put,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { Request, Response } from 'express';
 import { LoginUserDto } from './dto/login-user.dto';
 import { SignupUserDto } from './dto/signup-user.dto';
+import { UserResponse } from 'src/user/entities/user.entity';
+import { UserService } from 'src/user/user.service';
+import { AuthGuard } from 'src/common/guards/AuthGuard';
+import { UpdateUserDto } from 'src/user/dto/update-user.dto';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(
+    private readonly authService: AuthService,
+    private readonly userService: UserService,
+  ) {}
+
+  @Get('me')
+  @UseGuards(AuthGuard)
+  async getProfile(@Req() req: Request): Promise<UserResponse> {
+    console.log('requestuser=', req['user']);
+    return this.userService.findOne(req['user'].userId);
+  }
+
+  @Put('me')
+  @UseGuards(AuthGuard)
+  async updateProfile(
+    @Req() req: Request,
+    @Body() body: UpdateUserDto,
+  ): Promise<UserResponse> {
+    return this.userService.update(req['user'].userId, body);
+  }
 
   @Post('signup')
   async signup(@Body() body: SignupUserDto) {
     const { email, name, password } = body;
     console.log('signup');
     console.log('body=', body);
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     return await this.authService.signup(email, name, password);
   }
 
@@ -47,7 +74,7 @@ export class AuthController {
       sameSite: 'strict',
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
-
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     return res.send({ message: 'Logged in successfully' });
   }
 
@@ -55,6 +82,8 @@ export class AuthController {
   @HttpCode(HttpStatus.OK)
   async refresh(@Req() req: Request, @Res() res: Response) {
     const refreshToken = req.cookies.refreshToken;
+
+    console.log('refreshtoken=', refreshToken);
     const { accessToken, refreshToken: newRefreshToken } =
       await this.authService.refresh(refreshToken);
 
