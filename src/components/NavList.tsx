@@ -7,6 +7,7 @@ import {
 import { RootState } from '../store/store';
 import { useSelector } from 'react-redux';
 import { useLogoutMutation } from '../api/authApiSlice';
+import { BriefcaseMedical } from 'lucide-react';
 // import { useGetProfileQuery } from '@/api/profileApiSlice';
 import { memo } from 'react';
 
@@ -33,11 +34,19 @@ const NavList = memo(() => {
           <>
             <li>
               <NavLink to="/profile">
+                <BriefcaseMedical
+                  strokeWidth={1.5}
+                  className="size-9 text-white"
+                />
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/profile">
                 <UserCircleIcon className="size-9 text-white" />
               </NavLink>
             </li>
             <li className="flex items-center">
-              <button onClick={handleLogout}>
+              <button onClick={handleLogout} className="cursor-pointer">
                 <ArrowRightStartOnRectangleIcon className="size-9 text-white" />
               </button>
             </li>
