@@ -11,6 +11,7 @@ import { getErrorMessage } from '@/utils/getErrorMessage';
 import { AlertDestructive } from '@/components/ui/AlertDestructive';
 import { useDispatch } from 'react-redux';
 import { showToast } from '@/store/slices/toastSlice';
+import { useMemo } from 'react';
 // import { toast } from 'sonner';
 
 const zodSchema: ZodType<SignInData> = z.object({
@@ -48,13 +49,20 @@ const Login = () => {
     }
   };
 
+  const errorMessage = useMemo(() => {
+    if (signinError) {
+      return getErrorMessage(signinError);
+    }
+    return '';
+  }, [signinError]);
+
   return (
     <div className="w-full xs:max-w-md mx-auto p-6 bg-white xs:shadow-[0_0_10px_rgba(0,0,0,0.1)] xs:rounded-md">
       <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">
         Sign in
       </h2>
       {!isLoginLoading && signinError && (
-        <AlertDestructive message={getErrorMessage(signinError)} />
+        <AlertDestructive message={errorMessage} />
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col">

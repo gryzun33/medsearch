@@ -7,6 +7,7 @@ export const getErrorMessage = (
   if ('status' in error) {
     if (error.data && typeof error.data === 'object') {
       if ('message' in error.data && typeof error.data.message === 'string') {
+        console.log('ERRORMESSAGE');
         return error.data.message;
       }
     }
