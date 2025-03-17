@@ -1,6 +1,5 @@
 import { PrismaClient } from '@prisma/client';
 import pharmacies from './data/pharmacies.json';
-// const pharmacies = require('./data/pharmacies.json');
 console.log('pharmacies=', pharmacies);
 
 const prisma = new PrismaClient();
