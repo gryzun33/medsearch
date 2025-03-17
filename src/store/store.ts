@@ -12,6 +12,7 @@ import {
   REGISTER,
   REHYDRATE,
 } from 'redux-persist';
+import { pharmacyApiSlice } from '@/api/pharmacyApiSlice';
 
 export const store = configureStore({
   reducer: {
@@ -19,13 +20,18 @@ export const store = configureStore({
     toast: toastReducer,
     [authApiSlice.reducerPath]: authApiSlice.reducer,
     [profileApiSlice.reducerPath]: profileApiSlice.reducer,
+    [pharmacyApiSlice.reducerPath]: pharmacyApiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(authApiSlice.middleware, profileApiSlice.middleware),
+    }).concat(
+      authApiSlice.middleware,
+      profileApiSlice.middleware,
+      pharmacyApiSlice.middleware
+    ),
 });
 
 export const persistor = persistStore(store);
