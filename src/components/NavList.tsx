@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from 'react-router';
+import { NavLink } from 'react-router';
 import {
   ArrowRightEndOnRectangleIcon,
   ArrowRightStartOnRectangleIcon,
@@ -6,26 +6,27 @@ import {
 } from '@heroicons/react/24/outline';
 import { RootState } from '../store/store';
 import { useSelector } from 'react-redux';
-import { useLogoutMutation } from '../api/authApiSlice';
+// import { useLogoutMutation } from '../api/authApiSlice';
 import { BriefcaseMedical } from 'lucide-react';
 // import { useGetProfileQuery } from '@/api/profileApiSlice';
 import { memo } from 'react';
+import LogoutModal from './LogoutModal';
 
 const NavList = memo(() => {
   const isLogin = useSelector((state: RootState) => state.user.isLogin);
   // const { data: user /*  error */ } = useGetProfileQuery();
-  const [logoutApi] = useLogoutMutation();
-  const navigate = useNavigate();
+  // const [logoutApi] = useLogoutMutation();
+  // const navigate = useNavigate();
   console.log('LOGIN NAVLIST');
 
-  const handleLogout = async () => {
-    try {
-      await logoutApi().unwrap();
-      navigate('/');
-    } catch (error) {
-      console.error('Ошибка при логауте:', error);
-    }
-  };
+  // const handleLogout = async () => {
+  //   try {
+  //     await logoutApi().unwrap();
+  //     navigate('/');
+  //   } catch (error) {
+  //     console.error('Ошибка при логауте:', error);
+  //   }
+  // };
 
   return (
     <nav>
@@ -46,9 +47,11 @@ const NavList = memo(() => {
               </NavLink>
             </li>
             <li className="flex items-center">
-              <button onClick={handleLogout} className="cursor-pointer">
-                <ArrowRightStartOnRectangleIcon className="size-9 text-white" />
-              </button>
+              <LogoutModal>
+                <button className="cursor-pointer">
+                  <ArrowRightStartOnRectangleIcon className="size-9 text-white" />
+                </button>
+              </LogoutModal>
             </li>
           </>
         ) : (
