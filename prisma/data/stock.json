@@ -1,0 +1,1712 @@
+[
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 15.93,
+    "quantity": 61
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 19.77,
+    "quantity": 45
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 17.45,
+    "quantity": 20
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 14.52,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 18.91,
+    "quantity": 33
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 15.28,
+    "quantity": 35
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Aspirin",
+    "price": 14.6,
+    "quantity": 37
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 6.24,
+    "quantity": 21
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 17.01,
+    "quantity": 95
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 5.16,
+    "quantity": 11
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 7.14,
+    "quantity": 53
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 19.97,
+    "quantity": 38
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 14.57,
+    "quantity": 72
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Magnesium",
+    "price": 19.29,
+    "quantity": 32
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Calcium",
+    "price": 5.45,
+    "quantity": 99
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 13.61,
+    "quantity": 50
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Zinc",
+    "price": 10.29,
+    "quantity": 54
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Iron",
+    "price": 16.99,
+    "quantity": 83
+  },
+  {
+    "pharmacy": "Louth Pharmacy",
+    "medicine": "Loratadine",
+    "price": 5.93,
+    "quantity": 76
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 10.84,
+    "quantity": 79
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 5.99,
+    "quantity": 12
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 6.53,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 17.17,
+    "quantity": 41
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 18.86,
+    "quantity": 87
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 6.8,
+    "quantity": 66
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Aspirin",
+    "price": 10.96,
+    "quantity": 58
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 8.77,
+    "quantity": 56
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 16.51,
+    "quantity": 39
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 16.45,
+    "quantity": 13
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 11.61,
+    "quantity": 24
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 18.04,
+    "quantity": 99
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 16.98,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Magnesium",
+    "price": 15.67,
+    "quantity": 88
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Calcium",
+    "price": 17.76,
+    "quantity": 17
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 11.52,
+    "quantity": 90
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Zinc",
+    "price": 16.19,
+    "quantity": 99
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Iron",
+    "price": 14.13,
+    "quantity": 32
+  },
+  {
+    "pharmacy": "Louth Health Centre Pharmacy",
+    "medicine": "Loratadine",
+    "price": 9.11,
+    "quantity": 69
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 14.13,
+    "quantity": 75
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 6.83,
+    "quantity": 93
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 12.62,
+    "quantity": 75
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 5.94,
+    "quantity": 38
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 9.02,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 16.95,
+    "quantity": 43
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Aspirin",
+    "price": 16.47,
+    "quantity": 69
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 17.27,
+    "quantity": 91
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 13.78,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 12.19,
+    "quantity": 13
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 9.8,
+    "quantity": 61
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 19.92,
+    "quantity": 57
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 8.45,
+    "quantity": 10
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Magnesium",
+    "price": 10.79,
+    "quantity": 97
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Calcium",
+    "price": 14.76,
+    "quantity": 65
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 13.66,
+    "quantity": 83
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Zinc",
+    "price": 8.3,
+    "quantity": 71
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Iron",
+    "price": 5.86,
+    "quantity": 16
+  },
+  {
+    "pharmacy": "Eastgate Pharmacy",
+    "medicine": "Loratadine",
+    "price": 12.63,
+    "quantity": 44
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 10.8,
+    "quantity": 63
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 16.54,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 15.01,
+    "quantity": 17
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 19.8,
+    "quantity": 53
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 5.64,
+    "quantity": 85
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 5.58,
+    "quantity": 12
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Aspirin",
+    "price": 12.22,
+    "quantity": 95
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 8.81,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 6.04,
+    "quantity": 33
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 13.33,
+    "quantity": 11
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 14.12,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 18.13,
+    "quantity": 38
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 18.47,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Magnesium",
+    "price": 6.21,
+    "quantity": 44
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Calcium",
+    "price": 13.22,
+    "quantity": 43
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 13.6,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Zinc",
+    "price": 6.2,
+    "quantity": 56
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Iron",
+    "price": 7.35,
+    "quantity": 56
+  },
+  {
+    "pharmacy": "North Louth Pharmacy",
+    "medicine": "Loratadine",
+    "price": 15.25,
+    "quantity": 27
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 6.88,
+    "quantity": 34
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 6.61,
+    "quantity": 50
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 15.43,
+    "quantity": 40
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 9.01,
+    "quantity": 19
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 15.51,
+    "quantity": 70
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 10.29,
+    "quantity": 44
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Aspirin",
+    "price": 14.3,
+    "quantity": 13
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 7.08,
+    "quantity": 38
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 8.2,
+    "quantity": 76
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 7.07,
+    "quantity": 45
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 19.06,
+    "quantity": 25
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 9.15,
+    "quantity": 26
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 17.56,
+    "quantity": 81
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Magnesium",
+    "price": 12.91,
+    "quantity": 40
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Calcium",
+    "price": 16.01,
+    "quantity": 75
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 8.44,
+    "quantity": 31
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Zinc",
+    "price": 5.04,
+    "quantity": 76
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Iron",
+    "price": 9.91,
+    "quantity": 44
+  },
+  {
+    "pharmacy": "Louth Town Pharmacy",
+    "medicine": "Loratadine",
+    "price": 11.22,
+    "quantity": 15
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Paracetamol",
+    "price": 10.2,
+    "quantity": 43
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Ibuprofen",
+    "price": 18.1,
+    "quantity": 65
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Ibuprofen",
+    "price": 18.78,
+    "quantity": 15
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Amoxicillin",
+    "price": 12.9,
+    "quantity": 20
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Amoxicillin",
+    "price": 14.87,
+    "quantity": 76
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Cough Syrup",
+    "price": 10.99,
+    "quantity": 82
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Aspirin",
+    "price": 5.91,
+    "quantity": 21
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Cetirizine",
+    "price": 11.38,
+    "quantity": 34
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Omeprazole",
+    "price": 8.81,
+    "quantity": 68
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Multivitamin Syrup",
+    "price": 9.98,
+    "quantity": 68
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Vitamin D Drops",
+    "price": 5.11,
+    "quantity": 35
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Vitamin D Tablets",
+    "price": 6.01,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Saline Solution",
+    "price": 13.1,
+    "quantity": 91
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Magnesium",
+    "price": 13.51,
+    "quantity": 63
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Calcium",
+    "price": 11.39,
+    "quantity": 67
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Vitamins C Syrup",
+    "price": 8.24,
+    "quantity": 40
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Zinc",
+    "price": 19.78,
+    "quantity": 100
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Iron",
+    "price": 8.45,
+    "quantity": 15
+  },
+  {
+    "pharmacy": "The Chemist at Louth",
+    "medicine": "Loratadine",
+    "price": 18.4,
+    "quantity": 75
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 16.81,
+    "quantity": 81
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 16.9,
+    "quantity": 100
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 11.06,
+    "quantity": 25
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 12.07,
+    "quantity": 34
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 10.57,
+    "quantity": 82
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 8.01,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Aspirin",
+    "price": 12.29,
+    "quantity": 27
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 14.62,
+    "quantity": 77
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 11.34,
+    "quantity": 43
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 16.1,
+    "quantity": 33
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 9.61,
+    "quantity": 26
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 10.98,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 18.73,
+    "quantity": 66
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Magnesium",
+    "price": 14.23,
+    "quantity": 44
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Calcium",
+    "price": 10.24,
+    "quantity": 93
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 12.41,
+    "quantity": 84
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Zinc",
+    "price": 17.89,
+    "quantity": 18
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Iron",
+    "price": 16.43,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "Green Pharmacy",
+    "medicine": "Loratadine",
+    "price": 12.79,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Paracetamol",
+    "price": 16.52,
+    "quantity": 18
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Ibuprofen",
+    "price": 15.22,
+    "quantity": 89
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Ibuprofen",
+    "price": 7.38,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Amoxicillin",
+    "price": 15.69,
+    "quantity": 95
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Amoxicillin",
+    "price": 11.33,
+    "quantity": 81
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Cough Syrup",
+    "price": 14.91,
+    "quantity": 32
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Aspirin",
+    "price": 15.72,
+    "quantity": 79
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Cetirizine",
+    "price": 10.94,
+    "quantity": 19
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Omeprazole",
+    "price": 6.48,
+    "quantity": 50
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Multivitamin Syrup",
+    "price": 6.8,
+    "quantity": 12
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Vitamin D Drops",
+    "price": 5.01,
+    "quantity": 61
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Vitamin D Tablets",
+    "price": 16.79,
+    "quantity": 100
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Saline Solution",
+    "price": 16.77,
+    "quantity": 91
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Magnesium",
+    "price": 7.49,
+    "quantity": 82
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Calcium",
+    "price": 12.21,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Vitamins C Syrup",
+    "price": 6.92,
+    "quantity": 10
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Zinc",
+    "price": 6.64,
+    "quantity": 64
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Iron",
+    "price": 9.92,
+    "quantity": 70
+  },
+  {
+    "pharmacy": "Louth Pharmacy Express",
+    "medicine": "Loratadine",
+    "price": 15.53,
+    "quantity": 39
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 16.59,
+    "quantity": 87
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 19.4,
+    "quantity": 64
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 15.77,
+    "quantity": 44
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 18.37,
+    "quantity": 52
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 10.04,
+    "quantity": 23
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 18.17,
+    "quantity": 17
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Aspirin",
+    "price": 18.1,
+    "quantity": 36
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 17.35,
+    "quantity": 96
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 17.55,
+    "quantity": 56
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 19.63,
+    "quantity": 80
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 19.34,
+    "quantity": 34
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 11.24,
+    "quantity": 61
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 12.16,
+    "quantity": 46
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Magnesium",
+    "price": 12.2,
+    "quantity": 19
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Calcium",
+    "price": 7.91,
+    "quantity": 49
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 17.81,
+    "quantity": 84
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Zinc",
+    "price": 5.59,
+    "quantity": 21
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Iron",
+    "price": 15.29,
+    "quantity": 85
+  },
+  {
+    "pharmacy": "Willow Pharmacy",
+    "medicine": "Loratadine",
+    "price": 12.2,
+    "quantity": 90
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 15.0,
+    "quantity": 49
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 17.73,
+    "quantity": 23
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 18.26,
+    "quantity": 98
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 12.95,
+    "quantity": 17
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 12.47,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 16.48,
+    "quantity": 37
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Aspirin",
+    "price": 12.13,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 9.23,
+    "quantity": 96
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 17.76,
+    "quantity": 85
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 18.09,
+    "quantity": 87
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 10.08,
+    "quantity": 66
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 18.52,
+    "quantity": 100
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 7.7,
+    "quantity": 25
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Magnesium",
+    "price": 19.76,
+    "quantity": 90
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Calcium",
+    "price": 10.28,
+    "quantity": 93
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 19.27,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Zinc",
+    "price": 12.16,
+    "quantity": 61
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Iron",
+    "price": 19.04,
+    "quantity": 23
+  },
+  {
+    "pharmacy": "Cornerstone Pharmacy",
+    "medicine": "Loratadine",
+    "price": 15.59,
+    "quantity": 53
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 7.9,
+    "quantity": 39
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 18.17,
+    "quantity": 57
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 10.83,
+    "quantity": 100
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 8.86,
+    "quantity": 21
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 6.83,
+    "quantity": 33
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 19.54,
+    "quantity": 22
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Aspirin",
+    "price": 10.22,
+    "quantity": 78
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 14.34,
+    "quantity": 76
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 19.52,
+    "quantity": 55
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 19.87,
+    "quantity": 47
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 10.06,
+    "quantity": 62
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 11.16,
+    "quantity": 49
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 5.63,
+    "quantity": 98
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Magnesium",
+    "price": 10.84,
+    "quantity": 19
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Calcium",
+    "price": 5.1,
+    "quantity": 46
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 13.96,
+    "quantity": 88
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Zinc",
+    "price": 10.04,
+    "quantity": 66
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Iron",
+    "price": 11.88,
+    "quantity": 16
+  },
+  {
+    "pharmacy": "Sunrise Pharmacy",
+    "medicine": "Loratadine",
+    "price": 7.96,
+    "quantity": 26
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 14.89,
+    "quantity": 22
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 5.02,
+    "quantity": 67
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 5.01,
+    "quantity": 30
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 13.29,
+    "quantity": 25
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 11.34,
+    "quantity": 81
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 11.99,
+    "quantity": 47
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Aspirin",
+    "price": 17.56,
+    "quantity": 73
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 8.27,
+    "quantity": 11
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 16.63,
+    "quantity": 15
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 18.87,
+    "quantity": 33
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 6.86,
+    "quantity": 38
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 11.03,
+    "quantity": 71
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 9.3,
+    "quantity": 27
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Magnesium",
+    "price": 11.9,
+    "quantity": 98
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Calcium",
+    "price": 9.52,
+    "quantity": 29
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 17.2,
+    "quantity": 94
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Zinc",
+    "price": 9.69,
+    "quantity": 81
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Iron",
+    "price": 15.23,
+    "quantity": 44
+  },
+  {
+    "pharmacy": "Bright Health Pharmacy",
+    "medicine": "Loratadine",
+    "price": 6.49,
+    "quantity": 63
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 6.92,
+    "quantity": 39
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 12.43,
+    "quantity": 55
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 13.96,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 10.71,
+    "quantity": 33
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 17.01,
+    "quantity": 97
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 6.93,
+    "quantity": 42
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Aspirin",
+    "price": 16.59,
+    "quantity": 54
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 15.45,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 17.81,
+    "quantity": 51
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 11.74,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 19.93,
+    "quantity": 62
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 8.47,
+    "quantity": 18
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 10.18,
+    "quantity": 35
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Magnesium",
+    "price": 14.8,
+    "quantity": 56
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Calcium",
+    "price": 7.81,
+    "quantity": 74
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 5.37,
+    "quantity": 21
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Zinc",
+    "price": 9.15,
+    "quantity": 80
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Iron",
+    "price": 6.56,
+    "quantity": 91
+  },
+  {
+    "pharmacy": "Harmony Pharmacy",
+    "medicine": "Loratadine",
+    "price": 7.61,
+    "quantity": 97
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 17.67,
+    "quantity": 70
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 7.07,
+    "quantity": 72
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 16.28,
+    "quantity": 58
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 6.87,
+    "quantity": 11
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 14.4,
+    "quantity": 78
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 16.69,
+    "quantity": 92
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Aspirin",
+    "price": 5.97,
+    "quantity": 55
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 17.17,
+    "quantity": 99
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 19.9,
+    "quantity": 58
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 8.49,
+    "quantity": 13
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 11.82,
+    "quantity": 85
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 17.64,
+    "quantity": 94
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 15.82,
+    "quantity": 37
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Magnesium",
+    "price": 19.55,
+    "quantity": 89
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Calcium",
+    "price": 16.47,
+    "quantity": 23
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 18.34,
+    "quantity": 31
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Zinc",
+    "price": 18.36,
+    "quantity": 63
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Iron",
+    "price": 8.61,
+    "quantity": 65
+  },
+  {
+    "pharmacy": "Aurora Pharmacy",
+    "medicine": "Loratadine",
+    "price": 19.41,
+    "quantity": 25
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Paracetamol",
+    "price": 10.57,
+    "quantity": 15
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 13.64,
+    "quantity": 94
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Ibuprofen",
+    "price": 18.11,
+    "quantity": 15
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 16.24,
+    "quantity": 25
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Amoxicillin",
+    "price": 5.33,
+    "quantity": 23
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Cough Syrup",
+    "price": 9.07,
+    "quantity": 48
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Aspirin",
+    "price": 11.26,
+    "quantity": 85
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Cetirizine",
+    "price": 13.72,
+    "quantity": 97
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Omeprazole",
+    "price": 12.74,
+    "quantity": 19
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Multivitamin Syrup",
+    "price": 5.28,
+    "quantity": 36
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Vitamin D Drops",
+    "price": 19.08,
+    "quantity": 12
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Vitamin D Tablets",
+    "price": 12.52,
+    "quantity": 14
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Saline Solution",
+    "price": 18.86,
+    "quantity": 64
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Magnesium",
+    "price": 5.81,
+    "quantity": 58
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Calcium",
+    "price": 8.47,
+    "quantity": 78
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Vitamins C Syrup",
+    "price": 16.63,
+    "quantity": 29
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Zinc",
+    "price": 17.18,
+    "quantity": 94
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Iron",
+    "price": 13.12,
+    "quantity": 61
+  },
+  {
+    "pharmacy": "East Louth Pharmacy",
+    "medicine": "Loratadine",
+    "price": 13.0,
+    "quantity": 23
+  }
+]

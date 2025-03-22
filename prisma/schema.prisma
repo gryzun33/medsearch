@@ -22,6 +22,8 @@ model Pharmacy {
   latitude  Float
   longitude Float
   hours     String
+
+  medicines Stock[]
 }
 
 model Medicine {
@@ -30,4 +32,18 @@ model Medicine {
   type       String
   dosage     String
   volume     String
+
+  pharmacies Stock[]
+}
+
+model Stock {
+  pharmacyId String
+  medicineId String
+  price      Float
+  quantity   Int
+
+  pharmacy   Pharmacy @relation(fields: [pharmacyId], references: [id], onDelete: Cascade)
+  medicine   Medicine @relation(fields: [medicineId], references: [id], onDelete: Cascade)
+
+  @@id([pharmacyId, medicineId])
 }
