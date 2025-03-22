@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Paracetamol",
+    "type": "Tablet",
+    "dosage": "500mg",
+    "volume": "20 pcs"
+  },
+  {
+    "name": "Ibuprofen",
+    "type": "Tablet",
+    "dosage": "200mg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Ibuprofen",
+    "type": "Syrup",
+    "dosage": "5mg/5ml",
+    "volume": "100ml"
+  },
+  {
+    "name": "Amoxicillin",
+    "type": "Capsule",
+    "dosage": "500mg",
+    "volume": "24 pcs"
+  },
+  {
+    "name": "Amoxicillin",
+    "type": "Syrup",
+    "dosage": "10mg/5ml",
+    "volume": "125ml"
+  },
+  {
+    "name": "Cough Syrup",
+    "type": "Syrup",
+    "dosage": "10mg/5ml",
+    "volume": "100ml"
+  },
+  {
+    "name": "Aspirin",
+    "type": "Tablet",
+    "dosage": "100mg",
+    "volume": "40 pcs"
+  },
+  {
+    "name": "Cetirizine",
+    "type": "Tablet",
+    "dosage": "10mg",
+    "volume": "20 pcs"
+  },
+  {
+    "name": "Omeprazole",
+    "type": "Capsule",
+    "dosage": "20mg",
+    "volume": "14 pcs"
+  },
+  {
+    "name": "Multivitamin Syrup",
+    "type": "Syrup",
+    "dosage": "50mg/5ml",
+    "volume": "150ml"
+  },
+  {
+    "name": "Vitamin D Drops",
+    "type": "Drops",
+    "dosage": "5mg/5ml",
+    "volume": "20ml"
+  },
+  {
+    "name": "Vitamin D Tablets",
+    "type": "Tablet",
+    "dosage": "1000 IU",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Saline Solution",
+    "type": "Solution",
+    "dosage": "500mg/100ml",
+    "volume": "500ml"
+  },
+  {
+    "name": "Magnesium",
+    "type": "Tablet",
+    "dosage": "250mg",
+    "volume": "60 pcs"
+  },
+  {
+    "name": "Calcium",
+    "type": "Tablet",
+    "dosage": "500mg",
+    "volume": "60 pcs"
+  },
+  {
+    "name": "Vitamins C Syrup",
+    "type": "Syrup",
+    "dosage": "15000IU/ml",
+    "volume": "150ml"
+  },
+  {
+    "name": "Zinc",
+    "type": "Tablet",
+    "dosage": "25mg",
+    "volume": "40 pcs"
+  },
+  {
+    "name": "Iron",
+    "type": "Tablet",
+    "dosage": "20mg",
+    "volume": "60 pcs"
+  },
+  {
+    "name": "Loratadine",
+    "type": "Tablet",
+    "dosage": "10mg",
+    "volume": "30 pcs"
+  }
+]

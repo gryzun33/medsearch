@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import pharmacies from './data/pharmacies.json';
+import medicines from './data/medicines.json';
 console.log('pharmacies=', pharmacies);
 
 const prisma = new PrismaClient();
@@ -15,6 +16,17 @@ async function main() {
         latitude: pharmacy.position[0],
         longitude: pharmacy.position[1],
         hours: pharmacy.hours,
+      },
+    });
+  }
+
+  for (const medicine of medicines) {
+    await prisma.medicine.create({
+      data: {
+        name: medicine.name,
+        type: medicine.type,
+        dosage: medicine.dosage,
+        volume: medicine.volume,
       },
     });
   }

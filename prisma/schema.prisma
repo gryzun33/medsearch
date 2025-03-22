@@ -23,3 +23,11 @@ model Pharmacy {
   longitude Float
   hours     String
 }
+
+model Medicine {
+  id         String      @id @default(uuid())
+  name       String
+  type       String
+  dosage     String
+  volume     String
+}
