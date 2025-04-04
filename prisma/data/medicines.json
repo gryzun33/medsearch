@@ -1,0 +1,188 @@
+[
+  {
+    "name": "Paracetamol",
+    "type": "Tablet",
+    "dosage": "500mg",
+    "volume": "20 pcs"
+  },
+  {
+    "name": "Paracetamol Forte",
+    "type": "Syrup",
+    "dosage": "500mg",
+    "volume": "20 pcs"
+  },
+  {
+    "name": "Ibuprofen",
+    "type": "Tablet",
+    "dosage": "200mg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Ibuprofen Forte",
+    "type": "Syrup",
+    "dosage": "5mg/5ml",
+    "volume": "100ml"
+  },
+  {
+    "name": "Amoxicillin",
+    "type": "Capsule",
+    "dosage": "500mg",
+    "volume": "24 pcs"
+  },
+  {
+    "name": "Cough Syrup",
+    "type": "Syrup",
+    "dosage": "10mg/5ml",
+    "volume": "100ml"
+  },
+  {
+    "name": "Aspirin",
+    "type": "Tablet",
+    "dosage": "100mg",
+    "volume": "40 pcs"
+  },
+  {
+    "name": "Cetirizine",
+    "type": "Tablet",
+    "dosage": "10mg",
+    "volume": "20 pcs"
+  },
+  {
+    "name": "Omeprazole 14",
+    "type": "Capsule",
+    "dosage": "20mg",
+    "volume": "14 pcs"
+  },
+  {
+    "name": "Omeprazole 28",
+    "type": "Capsule",
+    "dosage": "20mg",
+    "volume": "28 pcs"
+  },
+  {
+    "name": "Multivitamin Syrup",
+    "type": "Syrup",
+    "dosage": "50mg/5ml",
+    "volume": "150ml"
+  },
+  {
+    "name": "Vitamin D Drops",
+    "type": "Drops",
+    "dosage": "5mg/5ml",
+    "volume": "20ml"
+  },
+  {
+    "name": "Vitamin D Tablets",
+    "type": "Tablet",
+    "dosage": "1000 IU",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Saline Solution",
+    "type": "Solution",
+    "dosage": "500mg/100ml",
+    "volume": "500ml"
+  },
+  {
+    "name": "Magnesium",
+    "type": "Tablet",
+    "dosage": "250mg",
+    "volume": "60 pcs"
+  },
+  {
+    "name": "Calcium",
+    "type": "Tablet",
+    "dosage": "500mg",
+    "volume": "60 pcs"
+  },
+  {
+    "name": "Vitamins C Syrup",
+    "type": "Syrup",
+    "dosage": "15000IU/ml",
+    "volume": "150ml"
+  },
+  {
+    "name": "Zinc",
+    "type": "Tablet",
+    "dosage": "25mg",
+    "volume": "40 pcs"
+  },
+  {
+    "name": "Iron",
+    "type": "Tablet",
+    "dosage": "20mg",
+    "volume": "60 pcs"
+  },
+  {
+    "name": "Loratadine",
+    "type": "Tablet",
+    "dosage": "10mg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Metformin",
+    "type": "Tablet",
+    "dosage": "500mg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Simvastatin",
+    "type": "Tablet",
+    "dosage": "20mg",
+    "volume": "28 pcs"
+  },
+  {
+    "name": "Losartan",
+    "type": "Tablet",
+    "dosage": "50mg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Atorvastatin",
+    "type": "Tablet",
+    "dosage": "40mg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Azithromycin",
+    "type": "Capsule",
+    "dosage": "250mg",
+    "volume": "6 pcs"
+  },
+  {
+    "name": "Hydrochlorothiazide",
+    "type": "Tablet",
+    "dosage": "25mg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Clarithromycin",
+    "type": "Tablet",
+    "dosage": "500mg",
+    "volume": "14 pcs"
+  },
+  {
+    "name": "Folic Acid 60",
+    "type": "Tablet",
+    "dosage": "400mcg",
+    "volume": "60 pcs"
+  },
+  {
+    "name": "Folic Acid 30",
+    "type": "Tablet",
+    "dosage": "400mcg",
+    "volume": "30 pcs"
+  },
+  {
+    "name": "Albuterol",
+    "type": "Inhaler",
+    "dosage": "100mcg/dose",
+    "volume": "200 doses"
+  },
+  {
+    "name": "Prednisolone",
+    "type": "Tablet",
+    "dosage": "5mg",
+    "volume": "30 pcs"
+  }
+]
