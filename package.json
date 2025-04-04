@@ -1,0 +1,27 @@
+{
+  "name": "userbase",
+  "packageManager": "npm@10.8.3",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
+  "scripts": {
+    "frontend": "npm run dev --workspace=frontend",
+    "server": "npm run start:dev --workspace=server",
+    "migrate:seed": "npm run migrate:seed --workspace=server",
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run start --workspace=server\"",
+    "build": "concurrently \"npm run build --workspace=frontend\" \"npm run build --workspace=server\"",
+    "start": "concurrently \"npm run preview --workspace=frontend\" \"npm run start:prod --workspace=server\"",
+    "start:frontend": "npm run preview --workspace=frontend",
+    "start:backend": "npm run start:prod --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

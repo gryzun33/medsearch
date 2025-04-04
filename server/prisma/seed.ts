@@ -1,7 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import pharmacies from './data/pharmacies.json';
 import medicines from './data/medicines.json';
-// console.log('pharmacies=', pharmacies);
 
 const prisma = new PrismaClient();
 
@@ -28,23 +27,29 @@ async function main() {
   const allMedicines = await prisma.medicine.findMany();
 
   for (const pharmacy of allPharmacies) {
-    // Определяем случайное количество связей для каждой аптеки
     const randomMedicines = allMedicines
-      .sort(() => 0.5 - Math.random()) // случайный порядок
-      .slice(0, Math.floor(Math.random() * allMedicines.length) + 1); // случайное количество
-
+      .sort(() => 0.5 - Math.random())
+      .slice(0, Math.floor(Math.random() * allMedicines.length) + 1);
     for (const medicine of randomMedicines) {
-      await prisma.stock.create({
-        data: {
+      const existingStock = await prisma.stock.findFirst({
+        where: {
           pharmacyId: pharmacy.id,
           medicineId: medicine.id,
-          price: parseFloat((Math.random() * (100 - 5) + 5).toFixed(2)), // случайная цена
-          quantity: Math.floor(Math.random() * 50) + 1, // случайное количество
         },
       });
+
+      if (!existingStock) {
+        await prisma.stock.create({
+          data: {
+            pharmacyId: pharmacy.id,
+            medicineId: medicine.id,
+            price: parseFloat((Math.random() * (100 - 5) + 5).toFixed(2)),
+            quantity: Math.floor(Math.random() * 50) + 1,
+          },
+        });
+      }
     }
   }
-
   console.log('Many-to-many links generated.');
 
   console.log('Seeding completed.');
