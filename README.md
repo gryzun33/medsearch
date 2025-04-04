@@ -1,6 +1,11 @@
-# Medsearch
+# 💊 MedSearch
 
-## Downloading
+## 🚧 Project Status
+
+⚠️ **Note:** This project is still under active development.  
+Some features are already working, but others are in progress.
+
+## 📥 Downloading
 
 Clone the project
 
@@ -16,14 +21,14 @@ cd medsearch
 
 Check if you are in branch `develop`
 
-## Installing NPM modules
+## 📦 Installing NPM modules
 
 ```
 npm install
 
 ```
 
-## Preparing to run
+## ⚙️ Preparing to run
 
 In folder `server` rename file `.env.example` to `.env`
 
@@ -33,7 +38,7 @@ To create database (apply prisma migrations and add seeds)
 npm run migrate:seed
 ```
 
-## Running the project
+## 🚀 Running the project
 
 To run project in development mode, it's recommended to run frontend and backend in separate terminals:
 
