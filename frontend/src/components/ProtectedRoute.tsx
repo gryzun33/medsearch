@@ -13,7 +13,7 @@ const ProtectedRoute = ({ children }: Props) => {
   console.log('user Protected=', user);
 
   if (isLoading) {
-    return <div>Loading...</div>; // Или любой другой индикатор загрузки
+    return <div>Loading...</div>;
   }
 
   if (error || !user) {
