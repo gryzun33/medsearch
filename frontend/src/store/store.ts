@@ -13,6 +13,7 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import { pharmacyApiSlice } from '@/api/pharmacyApiSlice';
+import { medicineApiSlice } from '@/api/medicineApiSlice';
 
 export const store = configureStore({
   reducer: {
@@ -21,6 +22,7 @@ export const store = configureStore({
     [authApiSlice.reducerPath]: authApiSlice.reducer,
     [profileApiSlice.reducerPath]: profileApiSlice.reducer,
     [pharmacyApiSlice.reducerPath]: pharmacyApiSlice.reducer,
+    [medicineApiSlice.reducerPath]: medicineApiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -30,7 +32,8 @@ export const store = configureStore({
     }).concat(
       authApiSlice.middleware,
       profileApiSlice.middleware,
-      pharmacyApiSlice.middleware
+      pharmacyApiSlice.middleware,
+      medicineApiSlice.middleware
     ),
 });
 
