@@ -6,6 +6,7 @@ import {
   Param,
   Put,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { MedicineService } from './medicine.service';
 import { CreateMedicineDto } from './dto/create-medicine.dto';
@@ -16,22 +17,32 @@ export class MedicineController {
   constructor(private readonly medicineService: MedicineService) {}
 
   @Post()
-  create(@Body() createMedicineDto: CreateMedicineDto) {
+  async create(@Body() createMedicineDto: CreateMedicineDto) {
     return this.medicineService.create(createMedicineDto);
   }
 
   @Get()
-  findAll() {
+  async findAll() {
     return this.medicineService.findAll();
   }
 
+  @Get('search')
+  async getMedicinesByName(@Query('searchText') searchText: string) {
+    // console.log('Received search text:', searchText);
+
+    const medicines = await this.medicineService.getMedicinesByName(searchText);
+    // console.log('Medicines found:', medicines);
+
+    return medicines;
+  }
+
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  async findOne(@Param('id') id: string) {
     return this.medicineService.findOne(id);
   }
 
   @Put(':id')
-  update(
+  async update(
     @Param('id') id: string,
     @Body() updateMedicineDto: UpdateMedicineDto,
   ) {
@@ -39,7 +50,7 @@ export class MedicineController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  async remove(@Param('id') id: string) {
     return this.medicineService.remove(id);
   }
 }
