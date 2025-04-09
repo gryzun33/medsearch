@@ -30,9 +30,13 @@ const SearchList = () => {
 
   return (
     <div className="max-w-screen-lg mx-auto w-full">
-      {!data.length ? (
+      {!searchText && (
+        <p className="text-gray-700">Please, enter a medication name</p>
+      )}
+      {!data.length && searchText && (
         <p className="text-gray-700">No medicines found for "{searchText}"</p>
-      ) : (
+      )}
+      {data.length > 0 && searchText && (
         <>
           <p className="text-gray-700">Search results for "{searchText}"</p>
           <div className="w-full overflow-hidden rounded-sm shadow-sm mt-3">

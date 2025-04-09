@@ -6,16 +6,28 @@
     "volume": "20 pcs"
   },
   {
+    "name": "Paracetamol",
+    "type": "Tablet",
+    "dosage": "500mg",
+    "volume": "30 pcs"
+  },
+  {
     "name": "Paracetamol Forte",
     "type": "Syrup",
     "dosage": "500mg",
-    "volume": "20 pcs"
+    "volume": "100 ml"
   },
   {
     "name": "Ibuprofen",
     "type": "Tablet",
     "dosage": "200mg",
     "volume": "30 pcs"
+  },
+  {
+    "name": "Ibuprofen",
+    "type": "Tablet",
+    "dosage": "200mg",
+    "volume": "20 pcs"
   },
   {
     "name": "Ibuprofen Forte",
