@@ -1,11 +1,9 @@
 import { Search } from 'lucide-react';
 import { Input } from './ui/input';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { useSearchMedicinesQuery } from '@/api/medicineApiSlice';
-
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/store/store';
+import { useDispatch } from 'react-redux';
 import { setSearchText } from '@/store/slices/searchSlice';
+import { useNavigate } from 'react-router';
 
 type FormData = {
   searchText: string;
@@ -13,33 +11,16 @@ type FormData = {
 
 const MedicineSearch = () => {
   const dispatch = useDispatch();
-  const searchText = useSelector((state: RootState) => state.search.searchText);
+  const navigate = useNavigate();
 
   const { register, handleSubmit, reset } = useForm<FormData>();
-
-  const { data, isError } = useSearchMedicinesQuery(searchText, {
-    skip: !searchText,
-  });
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log('Form submitted with data:', data);
     dispatch(setSearchText(data.searchText));
     reset();
+    navigate('/search');
   };
-
-  console.log('rendersearch');
-
-  if (isError) {
-    console.log('ERROR');
-  }
-
-  if (data) {
-    console.log('data=', data);
-  }
-
-  if (!data) {
-    console.log('null');
-  }
 
   return (
     <div className="w-full order-last sm:order-none sm:flex-grow lg:max-w-lg sm:px-6">

@@ -9,6 +9,7 @@ import Profile from './pages/Profile/Profile';
 import Cart from './pages/Cart/Cart';
 import Product from './pages/Product/Product';
 import RedirectRoute from './components/RedirectRoute';
+import SearchList from './pages/SearchList/SearchList';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           />
           <Route path="cart" element={<Cart />} />
           <Route path=":id" element={<Product />} />
+          <Route path="search" element={<SearchList />} />
         </Route>
       </Routes>
     </BrowserRouter>

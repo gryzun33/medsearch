@@ -6,7 +6,7 @@ export const medicineApiSlice = createApi({
   reducerPath: 'medicineApi',
   baseQuery: baseQuery,
   endpoints: (builder) => ({
-    searchMedicines: builder.query<MedicineSearchResponse, string>({
+    searchMedicines: builder.query<MedicineSearchResponse[], string>({
       query: (searchText) => `medicines/search?searchText=${searchText}`,
     }),
   }),
