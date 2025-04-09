@@ -28,8 +28,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white p-6 min-h-[calc(100vh-70px)] sm:min-h-[calc(100vh-80px)]">
-      <div className="w-full text-center">
+    <div className="flex flex-col items-center  bg-white min-h-[calc(100vh-70px)] sm:min-h-[calc(100vh-80px)]">
+      <p className="text-gray-400">
+        Most popular right now: Paracetamol, Ibuprofen, Aspirin
+      </p>
+      <div className="w-full text-center flex-grow flex flex-col items-center justify-center">
         <h1 className="text-3xl font-semibold text-gray-800 mb-4">
           Welcome to MedSearch!
         </h1>
