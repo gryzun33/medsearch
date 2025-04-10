@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { authApiSlice } from '../api/authApiSlice';
 import persistedUserReducer from './slices/userSlice';
-import toastReducer from './slices/toastSlice';
 import searchReducer from './slices/searchSlice';
 import { profileApiSlice } from '../api/profileApiSlice';
 import {
@@ -19,7 +18,6 @@ import { medicineApiSlice } from '@/api/medicineApiSlice';
 export const store = configureStore({
   reducer: {
     user: persistedUserReducer,
-    toast: toastReducer,
     search: searchReducer,
     [authApiSlice.reducerPath]: authApiSlice.reducer,
     [profileApiSlice.reducerPath]: profileApiSlice.reducer,
