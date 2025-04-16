@@ -1,36 +1,32 @@
 import MapComponent from '@/components/MapComponent';
-// import { Toaster } from '@/components/ui/sonner';
-// import { hideToast } from '@/store/slices/toastSlice';
-// import { RootState } from '@/store/store';
-// import { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { toast } from 'sonner';
+import { setSearchText } from '@/store/slices/searchSlice';
+import { POPULAR } from '@/utils/constants';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 const Home = () => {
-  // const dispatch = useDispatch();
-  // const { showToast, message } = useSelector((state: RootState) => state.toast);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (showToast) {
-  //     console.log('TOAST');
-  //     toast.success(message, {
-  //       duration: 3000,
-  //       style: {
-  //         background: '#D1F7D1',
-  //         color: '#006400',
-  //       },
-  //     });
-
-  //     setTimeout(() => {
-  //       dispatch(hideToast());
-  //     }, 3000);
-  //   }
-  // }, []);
-
+  const handleMedicineClick = (medicine: string) => {
+    console.log('Form submitted with data:', medicine);
+    dispatch(setSearchText(medicine));
+    navigate('/search');
+  };
   return (
     <div className="flex flex-col items-center  bg-white min-h-[calc(100vh-70px)] sm:min-h-[calc(100vh-80px)]">
       <p className="text-gray-400">
-        Most popular right now: Paracetamol, Ibuprofen, Aspirin
+        Most popular right now:{' '}
+        {POPULAR.map((medicine, index) => (
+          <span
+            key={index}
+            className="cursor-pointer text-gray-500"
+            onClick={() => handleMedicineClick(medicine)}
+          >
+            {medicine}
+            {index < POPULAR.length - 1 && ', '}
+          </span>
+        ))}
       </p>
       <div className="w-full text-center flex-grow flex flex-col items-center justify-center">
         <h1 className="text-3xl font-semibold text-gray-800 mb-4">
@@ -43,7 +39,6 @@ const Home = () => {
           <MapComponent />
         </div>
       </div>
-      {/* <Toaster /> */}
     </div>
   );
 };

@@ -46,35 +46,40 @@ const SearchPage = () => {
               <div className="col-span-4">Form</div>
               <div className="col-span-2 text-end">Prices</div>
             </div>
-            {data.map((medicine) => (
-              <div className="grid grid-cols-12 gap-4 p-2 text-gray-700 items-center border-t-[1px] border-gray-200 hover:bg-green-50 transition-colors">
-                <div className="col-span-1 flex justify-center">
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button className="text-gray-300 hover:text-green-500 cursor-pointer transition-colors">
-                          <Heart />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="bg-gray-500">
-                        <p>Add to my medications</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </div>
-
-                <div className="col-span-5">{medicine.name}</div>
-                <div className="col-span-4 text-sm">
-                  {`${medicine.type}, ${medicine.dosage}, ${medicine.volume}`}
-                </div>
-                <div className="col-span-2 text-end">
-                  <div>{`${medicine.minPrice} ... ${medicine.maxPrice} $`}</div>
-                  <div className="text-sm text-gray-500">
-                    {medicine.pharmaciesCount} pharmacies
+            <ul className="w-full">
+              {data.map((medicine) => (
+                <li
+                  key={medicine.id}
+                  className="grid grid-cols-12 gap-4 p-2 text-gray-700 items-center border-t-[1px] border-gray-200 hover:bg-green-50 transition-colors"
+                >
+                  <div className="col-span-1 flex justify-center">
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <button className="text-gray-300 hover:text-green-500 cursor-pointer transition-colors">
+                            <Heart />
+                          </button>
+                        </TooltipTrigger>
+                        <TooltipContent className="bg-gray-500">
+                          <p>Add to my medications</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
-                </div>
-              </div>
-            ))}
+
+                  <div className="col-span-5">{medicine.name}</div>
+                  <div className="col-span-4 text-sm">
+                    {`${medicine.type}, ${medicine.dosage}, ${medicine.volume}`}
+                  </div>
+                  <div className="col-span-2 text-end">
+                    <div>{`${medicine.minPrice} ... ${medicine.maxPrice} $`}</div>
+                    <div className="text-sm text-gray-500">
+                      {medicine.pharmaciesCount} pharmacies
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </>
       )}
