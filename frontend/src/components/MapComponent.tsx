@@ -43,8 +43,9 @@ const MapComponent = () => {
     <MapContainer
       center={position}
       zoom={15}
-      style={{ height: '500px', width: '100%' }}
+      // style={{ height: '500px', width: '100%' }}
       attributionControl={false}
+      className="h-full w-full min-h-[300px]"
     >
       <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
 
