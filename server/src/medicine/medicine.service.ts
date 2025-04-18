@@ -6,7 +6,10 @@ import { PrismaService } from 'src/common/prisma/prisma.service';
 import { CreateMedicineDto } from './dto/create-medicine.dto';
 import { UpdateMedicineDto } from './dto/update-medicine.dto';
 import { StockService } from 'src/stock /stock.service';
-import { MedicineSearchResponse } from './entities/medicine.entity';
+import {
+  MedicineSearchResponse,
+  MedicineWithPharmacies,
+} from './entities/medicine.entity';
 
 @Injectable()
 export class MedicineService {
@@ -30,8 +33,24 @@ export class MedicineService {
       where: {
         id: id,
       },
+    });
+
+    return medicine;
+  }
+
+  async findOneWithPharmacies(
+    id: string,
+  ): Promise<MedicineWithPharmacies | null> {
+    const medicine = await this.prisma.medicine.findUnique({
+      where: {
+        id: id,
+      },
       include: {
-        pharmacies: true,
+        pharmacies: {
+          include: {
+            pharmacy: true,
+          },
+        },
       },
     });
 
@@ -52,8 +71,6 @@ export class MedicineService {
         pharmacies: true,
       },
     });
-
-    console.log('medicines=', medicines);
 
     if (medicines.length === 0) {
       return null;

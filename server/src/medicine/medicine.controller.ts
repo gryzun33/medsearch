@@ -28,17 +28,18 @@ export class MedicineController {
 
   @Get('search')
   async getMedicinesByName(@Query('searchText') searchText: string) {
-    // console.log('Received search text:', searchText);
-
     const medicines = await this.medicineService.getMedicinesByName(searchText);
-    // console.log('Medicines found:', medicines);
-
     return medicines;
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
     return this.medicineService.findOne(id);
+  }
+
+  @Get(':id/pharmacies')
+  async findOneWithPharmacies(@Param('id') id: string) {
+    return this.medicineService.findOneWithPharmacies(id);
   }
 
   @Put(':id')
