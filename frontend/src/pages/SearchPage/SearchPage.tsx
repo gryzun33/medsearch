@@ -2,8 +2,8 @@ import { useSearchMedicinesQuery } from '@/api/medicineApiSlice';
 import { RootState } from '@/store/store';
 import { useSelector } from 'react-redux';
 
-import SearchList from '@/components/SearchList';
-import SearchTableHeader from '@/components/SearchTableHeader';
+import SearchList from '@/components/pages/SearchPage/SearchList';
+import SearchTableHeader from '@/components/pages/SearchPage/SearchTableHeader';
 
 const SearchPage = () => {
   const searchText = useSelector((state: RootState) => state.search.searchText);

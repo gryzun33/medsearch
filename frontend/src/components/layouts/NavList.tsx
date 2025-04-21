@@ -4,7 +4,7 @@ import {
   ArrowRightStartOnRectangleIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import { RootState } from '../store/store';
+import { RootState } from '../../store/store';
 import { useSelector } from 'react-redux';
 // import { useLogoutMutation } from '../api/authApiSlice';
 import { BriefcaseMedical } from 'lucide-react';

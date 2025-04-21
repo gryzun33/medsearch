@@ -1,5 +1,5 @@
 import { Search } from 'lucide-react';
-import { Input } from './ui/input';
+import { Input } from '../ui/input';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { setSearchText } from '@/store/slices/searchSlice';

@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from './components/shared/ProtectedRoute';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home/Home';
 import AuthLayout from './layouts/AuthLayout';
@@ -8,7 +8,7 @@ import Registration from './pages/Registration/Registration';
 import Profile from './pages/Profile/Profile';
 import Cart from './pages/Cart/Cart';
 import Product from './pages/Product/Product';
-import RedirectRoute from './components/RedirectRoute';
+import RedirectRoute from './components/shared/RedirectRoute';
 import SearchPage from './pages/SearchPage/SearchPage';
 
 function App() {

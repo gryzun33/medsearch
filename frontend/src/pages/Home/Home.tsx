@@ -1,4 +1,4 @@
-import MapComponent from '@/components/MapComponent';
+import MapComponent from '@/components/shared/MapComponent';
 import { setSearchText } from '@/store/slices/searchSlice';
 import { POPULAR } from '@/utils/constants';
 import { useDispatch } from 'react-redux';
