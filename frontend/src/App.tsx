@@ -7,7 +7,6 @@ import Login from './pages/Login/Login';
 import Registration from './pages/Registration/Registration';
 import Profile from './pages/Profile/Profile';
 import Cart from './pages/Cart/Cart';
-import Product from './pages/Product/Product';
 import RedirectRoute from './components/shared/RedirectRoute';
 import SearchPage from './pages/SearchPage/SearchPage';
 import Pharmacies from './pages/Pharmacies/Pharmacies';
