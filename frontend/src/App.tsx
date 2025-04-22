@@ -10,6 +10,7 @@ import Cart from './pages/Cart/Cart';
 import Product from './pages/Product/Product';
 import RedirectRoute from './components/shared/RedirectRoute';
 import SearchPage from './pages/SearchPage/SearchPage';
+import Pharmacies from './pages/Pharmacies/Pharmacies';
 
 function App() {
   return (
@@ -44,7 +45,7 @@ function App() {
             }
           />
           <Route path="cart" element={<Cart />} />
-          <Route path=":id" element={<Product />} />
+          <Route path="medicine/:id/pharmacies" element={<Pharmacies />} />
           <Route path="search" element={<SearchPage />} />
         </Route>
       </Routes>
