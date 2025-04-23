@@ -40,6 +40,7 @@ export class MedicineService {
 
   async findOneWithPharmacies(
     id: string,
+    order: 'asc' | 'desc' = 'asc',
   ): Promise<MedicineWithPharmacies | null> {
     const medicine = await this.prisma.medicine.findUnique({
       where: {
@@ -47,6 +48,9 @@ export class MedicineService {
       },
       include: {
         pharmacies: {
+          orderBy: {
+            price: order,
+          },
           include: {
             pharmacy: true,
           },

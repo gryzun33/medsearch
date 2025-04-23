@@ -38,8 +38,12 @@ export class MedicineController {
   }
 
   @Get(':id/pharmacies')
-  async findOneWithPharmacies(@Param('id') id: string) {
-    return this.medicineService.findOneWithPharmacies(id);
+  async findOneWithPharmacies(
+    @Param('id') id: string,
+    @Query('order') order?: 'asc' | 'desc',
+  ) {
+    const sortOrder = order === 'desc' ? 'desc' : 'asc';
+    return this.medicineService.findOneWithPharmacies(id, sortOrder);
   }
 
   @Put(':id')
