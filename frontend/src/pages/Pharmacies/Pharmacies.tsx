@@ -1,13 +1,19 @@
 import { useGetMedicineWithPharmaciesQuery } from '@/api/medicineApiSlice';
 import PharmaciesTableHeader from '@/components/pages/Pharmacies/PharmaciesTableHeader';
 import PharmacyList from '@/components/pages/Pharmacies/PharmacyList';
+import { PriceSortSelect } from '@/components/pages/Pharmacies/PriceSortSelect';
+import { RootState } from '@/store/store';
 import { skipToken } from '@reduxjs/toolkit/query/react';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 
 const Pharmacies = () => {
   const { id } = useParams();
+  const sortOrder = useSelector(
+    (state: RootState) => state.sortPharmacies.priceOrder
+  );
   const { data, isLoading, error } = useGetMedicineWithPharmaciesQuery(
-    id ?? skipToken
+    id ? { id, order: sortOrder } : skipToken
   );
 
   if (!id) return <p>Invalid medicine</p>;
@@ -19,7 +25,17 @@ const Pharmacies = () => {
 
   return (
     <div className="max-w-screen-lg mx-auto w-full">
-      <p className="text-gray-700 px-2 text-sm font-semibold lg:text-base">{`${data.name}, ${data.type}, ${data.dosage}, ${data.volume}`}</p>
+      <div className="flex justify-between items-center px-2 gap-4">
+        <p className="text-gray-700 text-sm font-semibold lg:text-base flex flex-wrap gap-x-1">
+          <span>{data.name},</span>
+          <span>{data.type},</span>
+          <span>{data.dosage},</span>
+          <span>{data.volume}</span>
+        </p>
+        <div>
+          <PriceSortSelect />
+        </div>
+      </div>
 
       <div className="w-full overflow-hidden lg:rounded-sm shadow-sm mt-3">
         <PharmaciesTableHeader />

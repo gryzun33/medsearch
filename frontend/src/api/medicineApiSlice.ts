@@ -12,11 +12,13 @@ export const medicineApiSlice = createApi({
     searchMedicines: builder.query<MedicineSearchResponse[], string>({
       query: (searchText) => `medicines/search?searchText=${searchText}`,
     }),
-    getMedicineWithPharmacies: builder.query<MedWithPharmaciesResponse, string>(
-      {
-        query: (id) => `medicines/${id}/pharmacies`,
-      }
-    ),
+    getMedicineWithPharmacies: builder.query<
+      MedWithPharmaciesResponse,
+      { id: string; order?: 'asc' | 'desc' }
+    >({
+      query: ({ id, order = 'asc' }: { id: string; order?: 'asc' | 'desc' }) =>
+        `medicines/${id}/pharmacies?order=${order}`,
+    }),
   }),
 });
 

@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { authApiSlice } from '../api/authApiSlice';
 import persistedUserReducer from './slices/userSlice';
 import searchReducer from './slices/searchSlice';
+import sortPharmaciesReducer from './slices/sortPharmaciesSlice';
 import { profileApiSlice } from '../api/profileApiSlice';
 import {
   FLUSH,
@@ -19,6 +20,7 @@ export const store = configureStore({
   reducer: {
     user: persistedUserReducer,
     search: searchReducer,
+    sortPharmacies: sortPharmaciesReducer,
     [authApiSlice.reducerPath]: authApiSlice.reducer,
     [profileApiSlice.reducerPath]: profileApiSlice.reducer,
     [pharmacyApiSlice.reducerPath]: pharmacyApiSlice.reducer,
