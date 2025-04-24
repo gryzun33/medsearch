@@ -2,7 +2,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import { authApiSlice } from '../api/authApiSlice';
 import persistedUserReducer from './slices/userSlice';
 import searchReducer from './slices/searchSlice';
-import sortPharmaciesReducer from './slices/sortPharmaciesSlice';
 import { profileApiSlice } from '../api/profileApiSlice';
 import {
   FLUSH,
@@ -15,12 +14,14 @@ import {
 } from 'redux-persist';
 import { pharmacyApiSlice } from '@/api/pharmacyApiSlice';
 import { medicineApiSlice } from '@/api/medicineApiSlice';
+import pharmaciesViewReducer from './slices/pharmaciesViewSlice';
 
 export const store = configureStore({
   reducer: {
     user: persistedUserReducer,
     search: searchReducer,
-    sortPharmacies: sortPharmaciesReducer,
+    // sortPharmacies: sortPharmaciesReducer,
+    pharmaciesView: pharmaciesViewReducer,
     [authApiSlice.reducerPath]: authApiSlice.reducer,
     [profileApiSlice.reducerPath]: profileApiSlice.reducer,
     [pharmacyApiSlice.reducerPath]: pharmacyApiSlice.reducer,

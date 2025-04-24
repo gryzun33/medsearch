@@ -1,5 +1,6 @@
 import { useGetMedicineWithPharmaciesQuery } from '@/api/medicineApiSlice';
 import PharmaciesTableHeader from '@/components/pages/Pharmacies/PharmaciesTableHeader';
+import PharmaciesViewToggle from '@/components/pages/Pharmacies/PharmaciesViewToggle';
 import PharmacyList from '@/components/pages/Pharmacies/PharmacyList';
 import { PriceSortSelect } from '@/components/pages/Pharmacies/PriceSortSelect';
 import { RootState } from '@/store/store';
@@ -10,7 +11,10 @@ import { useParams } from 'react-router';
 const Pharmacies = () => {
   const { id } = useParams();
   const sortOrder = useSelector(
-    (state: RootState) => state.sortPharmacies.priceOrder
+    (state: RootState) => state.pharmaciesView.priceOrder
+  );
+  const pharmaciesView = useSelector(
+    (state: RootState) => state.pharmaciesView.pharmaciesView
   );
   const { data, isLoading, error } = useGetMedicineWithPharmaciesQuery(
     id ? { id, order: sortOrder } : skipToken
@@ -32,8 +36,9 @@ const Pharmacies = () => {
           <span>{data.dosage},</span>
           <span>{data.volume}</span>
         </p>
-        <div>
-          <PriceSortSelect />
+        <div className="flex gap-2">
+          <PriceSortSelect view={pharmaciesView} />
+          <PharmaciesViewToggle view={pharmaciesView} />
         </div>
       </div>
 

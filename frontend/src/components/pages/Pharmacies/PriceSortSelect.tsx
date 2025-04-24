@@ -4,16 +4,20 @@ import {
   SelectContent,
   SelectItem,
 } from '@/components/ui/select';
-import { setPriceOrder } from '@/store/slices/sortPharmaciesSlice';
+import { setPriceOrder } from '@/store/slices/pharmaciesViewSlice';
 import { RootState } from '@/store/store';
 import { SortOrder } from '@/types/common';
 import { ArrowDownNarrowWide, ArrowDownWideNarrow } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 
-export const PriceSortSelect = () => {
+type Props = {
+  view: string;
+};
+
+export const PriceSortSelect = ({ view }: Props) => {
   const dispatch = useDispatch();
   const sortOrder = useSelector(
-    (state: RootState) => state.sortPharmacies.priceOrder
+    (state: RootState) => state.pharmaciesView.priceOrder
   );
 
   return (
@@ -21,7 +25,10 @@ export const PriceSortSelect = () => {
       value={sortOrder}
       onValueChange={(value: SortOrder) => dispatch(setPriceOrder(value))}
     >
-      <SelectTrigger className="sm:w-[120px] p-1 !h-7 text-xs">
+      <SelectTrigger
+        className="sm:w-[120px] p-1 !h-7 text-xs self-end"
+        disabled={view === 'map'}
+      >
         <div className="flex items-center gap-1">
           {sortOrder === 'asc' ? (
             <ArrowDownNarrowWide size={16} />
