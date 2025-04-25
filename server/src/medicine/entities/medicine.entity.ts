@@ -1,6 +1,7 @@
 import { Medicine } from '@prisma/client';
 import { Stock } from '@prisma/client';
-import { Pharmacy } from '@prisma/client';
+import { Pharmacy } from 'src/pharmacy/entities/pharmacy.entity';
+// import { Pharmacy } from '@prisma/client';
 
 export type MedicineSearchResponse = Medicine & {
   pharmaciesCount: number;
@@ -9,7 +10,8 @@ export type MedicineSearchResponse = Medicine & {
 };
 
 export type MedicineWithPharmacies = Medicine & {
-  pharmacies: (Stock & {
-    pharmacy: Pharmacy;
+  pharmacies: (Pharmacy & {
+    price: number;
+    quantity: number;
   })[];
 };

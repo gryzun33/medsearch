@@ -1,5 +1,4 @@
 import { Pharmacy } from './pharmacy';
-import { Stock } from './stock';
 
 export type Medicine = {
   id: string;
@@ -16,7 +15,8 @@ export type MedicineSearchResponse = Medicine & {
 };
 
 export type MedWithPharmaciesResponse = Medicine & {
-  pharmacies: (Stock & {
-    pharmacy: Pharmacy;
+  pharmacies: (Pharmacy & {
+    price: number;
+    quantity: number;
   })[];
 };

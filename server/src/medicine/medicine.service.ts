@@ -58,7 +58,31 @@ export class MedicineService {
       },
     });
 
-    return medicine;
+    if (!medicine) return null;
+
+    const pharmacies = medicine.pharmacies.map((item) => ({
+      id: item.pharmacy.id,
+      name: item.pharmacy.name,
+      address: item.pharmacy.address,
+      position: [item.pharmacy.latitude, item.pharmacy.longitude] as [
+        number,
+        number,
+      ],
+      hours: item.pharmacy.hours,
+      price: item.price,
+      quantity: item.quantity,
+    }));
+
+    const medicineWithPharmacies = {
+      pharmacies,
+      id: medicine.id,
+      name: medicine.name,
+      type: medicine.type,
+      dosage: medicine.dosage,
+      volume: medicine.volume,
+    };
+
+    return medicineWithPharmacies;
   }
 
   async getMedicinesByName(

@@ -26,14 +26,14 @@ export const PriceSortSelect = ({ view }: Props) => {
       onValueChange={(value: SortOrder) => dispatch(setPriceOrder(value))}
     >
       <SelectTrigger
-        className="sm:w-[120px] p-1 !h-7 text-xs self-end"
+        className="sm:w-[120px] p-2 sm:p-1 !sm:h-7 text-xs sm:self-end"
         disabled={view === 'map'}
       >
         <div className="flex items-center gap-1">
           {sortOrder === 'asc' ? (
-            <ArrowDownNarrowWide size={16} />
+            <ArrowDownNarrowWide className="w-4 h-4" />
           ) : (
-            <ArrowDownWideNarrow size={16} />
+            <ArrowDownWideNarrow className="w-4 h-4" />
           )}
           <span className="hidden sm:inline text-gray-600">
             {sortOrder === 'asc' ? 'Low to High' : 'High to Low'}

@@ -1,3 +1,4 @@
+import { useGetPharmaciesQuery } from '@/api/pharmacyApiSlice';
 import MapComponent from '@/components/shared/MapComponent';
 import { setSearchText } from '@/store/slices/searchSlice';
 import { POPULAR } from '@/utils/constants';
@@ -7,6 +8,8 @@ import { useNavigate } from 'react-router';
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { data: pharmacies = [], error, isLoading } = useGetPharmaciesQuery();
 
   const handleMedicineClick = (medicine: string) => {
     console.log('Form submitted with data:', medicine);
@@ -36,7 +39,11 @@ const Home = () => {
           Explore the map below to discover nearby pharmacies!
         </p>
         <div className="w-full grow lg:rounded-lg lg:shadow-lg overflow-hidden mt-4">
-          <MapComponent />
+          <MapComponent
+            pharmacies={pharmacies}
+            isLoading={isLoading}
+            error={error}
+          />
         </div>
       </div>
     </div>
