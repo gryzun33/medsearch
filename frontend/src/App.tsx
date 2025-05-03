@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 import ProtectedRoute from './components/shared/ProtectedRoute';
 import MainLayout from './layouts/MainLayout';
-import Home from './pages/Home/Home';
+import Home from './pages/Home';
 import AuthLayout from './layouts/AuthLayout';
-import Login from './pages/Login/Login';
-import Registration from './pages/Registration/Registration';
-import Profile from './pages/Profile/Profile';
-import Cart from './pages/Cart/Cart';
+import Login from './pages/Login';
+import Registration from './pages/Registration';
+import Profile from './pages/Profile';
+import Cart from './pages/Cart';
 import RedirectRoute from './components/shared/RedirectRoute';
-import SearchPage from './pages/SearchPage/SearchPage';
-import Pharmacies from './pages/Pharmacies/Pharmacies';
+import SearchPage from './pages/SearchPage';
+import Pharmacies from './pages/Pharmacies';
 
 function App() {
   return (
