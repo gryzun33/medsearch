@@ -1,18 +1,15 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { z, ZodType } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import FormField from '../../components/shared/FormField';
-import SubmitButton from '../../components/shared/SubmitButton';
-import BottomLink from '../../components/shared/BottomLink';
-import { SignUpData } from '../../types/user';
-import { useLoginMutation, useSignupMutation } from '../../api/authApiSlice';
 import { useNavigate } from 'react-router';
 import { AlertDestructive } from '@/components/ui/AlertDestructive';
 import { getErrorMessage } from '@/utils/getErrorMessage';
-// import { useDispatch } from 'react-redux';
-// import { showToast } from '@/store/slices/toastSlice';
-// import { toast } from 'sonner';
 import { showSuccessToast } from '@/utils/showToast';
+import { SignUpData } from '@/types/user';
+import { useLoginMutation, useSignupMutation } from '@/api/authApiSlice';
+import FormField from '@/components/shared/FormField';
+import SubmitButton from '@/components/shared/SubmitButton';
+import BottomLink from '@/components/shared/BottomLink';
 
 const zodSchema: ZodType<SignUpData> = z
   .object({
@@ -37,9 +34,7 @@ const zodSchema: ZodType<SignUpData> = z
 
 const Registration = () => {
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
 
-  // const [signup, { isError, error }] = useSignupMutation();
   const [signup, { isLoading: isSignupLoading, error: signupError }] =
     useSignupMutation();
   const [signin, { isLoading: isLoginLoading, error: signinError }] =

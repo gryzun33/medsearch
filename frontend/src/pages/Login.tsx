@@ -1,19 +1,16 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { z, ZodType } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import FormField from '../../components/shared/FormField';
-import SubmitButton from '../../components/shared/SubmitButton';
-import BottomLink from '../../components/shared/BottomLink';
-import { SignInData } from '../../types/user';
-import { useLoginMutation } from '../../api/authApiSlice';
 import { useNavigate } from 'react-router';
 import { getErrorMessage } from '@/utils/getErrorMessage';
 import { AlertDestructive } from '@/components/ui/AlertDestructive';
-// import { useDispatch } from 'react-redux';
-// import { showToast } from '@/store/slices/toastSlice';
 import { useMemo } from 'react';
 import { showSuccessToast } from '@/utils/showToast';
-// import { toast } from 'sonner';
+import { useLoginMutation } from '@/api/authApiSlice';
+import { SignInData } from '@/types/user';
+import FormField from '@/components/shared/FormField';
+import SubmitButton from '@/components/shared/SubmitButton';
+import BottomLink from '@/components/shared/BottomLink';
 
 const zodSchema: ZodType<SignInData> = z.object({
   email: z.string().nonempty('Field is required').email('Invalid email format'),
@@ -25,7 +22,6 @@ const zodSchema: ZodType<SignInData> = z.object({
 
 const Login = () => {
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
 
   const [signin, { isLoading: isLoginLoading, error: signinError }] =
     useLoginMutation();
