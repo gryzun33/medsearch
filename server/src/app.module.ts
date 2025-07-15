@@ -6,7 +6,7 @@ import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { PharmacyModule } from './pharmacy/pharmacy.module';
 import { MedicineModule } from './medicine/medicine.module';
-import { StockModule } from './stock /stock.module';
+import { StockModule } from './stock/stock.module';
 
 @Module({
   imports: [

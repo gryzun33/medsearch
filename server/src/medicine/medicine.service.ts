@@ -5,7 +5,7 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { CreateMedicineDto } from './dto/create-medicine.dto';
 import { UpdateMedicineDto } from './dto/update-medicine.dto';
-import { StockService } from 'src/stock /stock.service';
+import { StockService } from 'src/stock/stock.service';
 import {
   MedicineSearchResponse,
   MedicineWithPharmacies,
